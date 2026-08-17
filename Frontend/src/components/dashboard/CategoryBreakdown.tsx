@@ -1,0 +1,57 @@
+import { useMemo } from "react";
+import { Layers } from "lucide-react";
+
+import type { DashboardData } from "../../api/dashboard.api";
+
+interface CategoryBreakdownProps {
+  data: DashboardData;
+}
+
+const money = (value: number) => `${value.toLocaleString("fr-FR")} DA`;
+
+export default function CategoryBreakdown({ data }: CategoryBreakdownProps) {
+  const maxCategoryRevenue = useMemo(() => {
+    if (!data.categoryBreakdown?.length) return 0;
+
+    return Math.max(...data.categoryBreakdown.map((item) => item.revenue));
+  }, [data.categoryBreakdown]);
+
+  return (
+    <div className="rounded-3xl border border-[#eadfce] bg-white p-6">
+      <div className="mb-5 flex items-center gap-2">
+        <Layers size={20} />
+
+        <h2 className="font-semibold">Répartition par catégorie</h2>
+      </div>
+
+      {!data.categoryBreakdown?.length ? (
+        <p className="text-sm text-gray-500">Aucune donnée</p>
+      ) : (
+        <div className="space-y-4">
+          {data.categoryBreakdown.map((item) => (
+            <div key={item._id}>
+              <div className="flex justify-between text-sm">
+                <span>{item.name}</span>
+
+                <strong>{money(item.revenue)}</strong>
+              </div>
+
+              <div className="mt-2 h-2 w-full rounded-full bg-[#f7f4ee]">
+                <div
+                  className="h-2 rounded-full bg-[#D8B98A]"
+                  style={{
+                    width: `${
+                      maxCategoryRevenue > 0
+                        ? (item.revenue / maxCategoryRevenue) * 100
+                        : 0
+                    }%`,
+                  }}
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}

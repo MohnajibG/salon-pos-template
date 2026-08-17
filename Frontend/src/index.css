@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700;800&display=swap");
+
+@import "tailwindcss";
+
+/* ================================
+   SALONPRO DESIGN SYSTEM
+================================ */
+
+:root {
+  --black: #0a0a0a;
+  --dark: #171717;
+  --text: #252525;
+  --muted: #77736b;
+
+  --brown: #8b6a3d;
+  --brown-dark: #5a3a1e;
+  --surface: #f7f4ee;
+  --info: #2b6cb0;
+  --warning: #b7791f;
+
+  --cream: #faf7f1;
+  --champagne: #d6bf92;
+  --gold: #c9a96e;
+
+  --white: #ffffff;
+  --border: #e9e1d4;
+
+  --success: #2f855a;
+  --danger: #c53030;
+
+  --shadow-sm: 0 8px 24px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 20px 50px rgba(0, 0, 0, 0.08);
+
+  --radius-sm: 12px;
+  --radius-md: 24px;
+  --radius-pill: 999px;
+
+  --title-font: "Cinzel", serif;
+  --body-font: "Montserrat", sans-serif;
+}
+
+/* ================================
+   FONT UTILITIES
+================================ */
+
+.font-title {
+  font-family: var(--title-font);
+}
+
+.font-body {
+  font-family: var(--body-font);
+}
+
+/* ================================
+   EN-TÊTES DE PAGE (kicker / texte muet)
+================================ */
+
+.ak-kicker {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+  color: var(--brown);
+}
+
+.ak-muted {
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+/* ================================
+   THÈMES DE CHROME PAR RÔLE
+   (barre latérale / en-tête uniquement —
+   le contenu des pages reste sur les
+   tokens globaux ci-dessus pour les 3 rôles)
+================================ */
+
+.role-cashier {
+  --role-shell-bg: #151515;
+  --role-shell-text: #fff4d6;
+  --role-shell-accent: #d8b98a;
+  --role-shell-accent-text: #151515;
+  --role-shell-border: rgba(216, 185, 138, 0.2);
+}
+
+.role-employee {
+  --role-shell-bg: #fbf6f0;
+  --role-shell-text: #4a3226;
+  --role-shell-accent: #b5714b;
+  --role-shell-accent-text: #fbf6f0;
+  --role-shell-border: #e8d9c9;
+}
+
+/* ================================
+   RESET
+================================ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section[id] {
+  scroll-margin-top: 6rem;
+}
+
+body,
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+body {
+  font-family: var(--body-font);
+  color: var(--text);
+
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--title-font);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+  appearance: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
