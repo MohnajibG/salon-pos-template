@@ -2,11 +2,13 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight, CalendarDays, Sparkles } from "lucide-react";
 
-const images = [
-  "https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=2000&q=90",
-  "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=2000&q=90",
-  "https://images.unsplash.com/photo-1487412912498-0447578fcca8?auto=format&fit=crop&w=2000&q=90",
-  "https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=2000&q=90",
+// Dégradés de secours : à remplacer par de vraies photos du salon
+// (Frontend/src/components/home/Hero.tsx).
+const slides = [
+  "linear-gradient(135deg, #1f2937 0%, #374151 100%)",
+  "linear-gradient(135deg, #111827 0%, #1e3a8a 100%)",
+  "linear-gradient(135deg, #1f2937 0%, #0f172a 100%)",
+  "linear-gradient(135deg, #1e3a8a 0%, #111827 100%)",
 ];
 
 const trustPoints = [
@@ -20,7 +22,7 @@ const Hero = () => {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % images.length);
+      setCurrent((prev) => (prev + 1) % slides.length);
     }, 6000);
 
     return () => clearInterval(timer);
@@ -32,15 +34,14 @@ const Hero = () => {
       className="relative flex min-h-svh w-full flex-col overflow-hidden bg-(--black)"
     >
       <AnimatePresence mode="wait">
-        <motion.img
-          key={images[current]}
-          src={images[current]}
-          alt="SalonPro"
+        <motion.div
+          key={current}
           initial={{ opacity: 0, scale: 1.12 }}
           animate={{ opacity: 1, scale: 1.04 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 1.5 }}
-          className="absolute inset-0 h-full w-full object-cover"
+          className="absolute inset-0 h-full w-full"
+          style={{ backgroundImage: slides[current] }}
         />
       </AnimatePresence>
 
@@ -133,7 +134,7 @@ const Hero = () => {
 
       {/* Indicateurs */}
       <div className="absolute right-6 top-1/2 z-20 hidden -translate-y-1/2 flex-col gap-3 sm:right-10 lg:right-20 lg:flex">
-        {images.map((_, index) => (
+        {slides.map((_, index) => (
           <button
             key={index}
             type="button"

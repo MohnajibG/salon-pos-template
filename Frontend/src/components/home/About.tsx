@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Sparkles, Users, Award } from "lucide-react";
+import ImagePlaceholder from "../ui/ImagePlaceholder";
 
 const stats = [
   { value: "1500+", label: "Clientes satisfaites", icon: Users },
@@ -22,11 +23,7 @@ const About = () => (
         className="relative w-full lg:w-1/2"
       >
         <div className="relative rounded-4xl border border-(--border) bg-(--white) p-3 shadow-(--shadow-md)">
-          <img
-            src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=1200&q=80"
-            alt="SalonPro"
-            className="h-105 w-full rounded-[26px] object-cover sm:h-130"
-          />
+          <ImagePlaceholder className="h-105 w-full rounded-[26px] sm:h-130" />
 
           <div className="absolute inset-3 rounded-[26px] bg-linear-to-t from-(--black)/30 to-transparent" />
         </div>

@@ -10,7 +10,7 @@ const money = (value: number) => `${value.toLocaleString("fr-FR")} DA`;
 
 export default function PopularServices({ data }: PopularServicesProps) {
   return (
-    <div className="rounded-3xl border border-[#eadfce] bg-white p-6">
+    <div className="rounded-3xl border border-[#e5e7eb] bg-white p-6">
       <div className="mb-5 flex items-center gap-2">
         <Scissors size={20} />
 

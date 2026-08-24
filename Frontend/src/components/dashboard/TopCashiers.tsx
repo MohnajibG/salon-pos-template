@@ -8,7 +8,7 @@ const money = (value: number) => `${value.toLocaleString("fr-FR")} DA`;
 
 export default function TopCashiers({ data }: TopCashiersProps) {
   return (
-    <div className="rounded-3xl border border-[#eadfce] bg-white p-6">
+    <div className="rounded-3xl border border-[#e5e7eb] bg-white p-6">
       <h2 className="mb-5 font-semibold">Meilleurs vendeurs (caisse)</h2>
 
       <div className="space-y-3">
@@ -16,7 +16,7 @@ export default function TopCashiers({ data }: TopCashiersProps) {
           data.topCashiers.map((cashier) => (
             <div
               key={cashier.userId}
-              className="flex items-center justify-between rounded-2xl bg-[#f7f4ee] p-4"
+              className="flex items-center justify-between rounded-2xl bg-[#f3f4f6] p-4"
             >
               <span className="font-semibold">{cashier.name}</span>
 

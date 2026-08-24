@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import axios from "axios";
 import {
   Eye,
   EyeOff,
@@ -9,6 +10,7 @@ import {
   Scissors,
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import api from "../../api/axios";
 
 type Role = "admin" | "cashier" | "employee";
 
@@ -57,25 +59,7 @@ const Login = () => {
     setError("");
     setLoading(true);
     try {
-      const response = await fetch(
-        "https://site--ankelk--dnxhn8mdblq5.code.run/api/auth/login",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            email,
-            password,
-          }),
-        },
-      );
-
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data.message || "Email ou mot de passe incorrect");
-      }
+      const { data } = await api.post("/auth/login", { email, password });
 
       const user = data.user;
       const token = data.token;
@@ -109,11 +93,11 @@ const Login = () => {
         replace: true,
       });
     } catch (error) {
-      setError(
-        error instanceof Error
-          ? error.message
-          : "Impossible de se connecter au serveur",
-      );
+      const message = axios.isAxiosError<{ message?: string }>(error)
+        ? (error.response?.data?.message ?? "Email ou mot de passe incorrect")
+        : "Impossible de se connecter au serveur";
+
+      setError(message);
     } finally {
       setLoading(false);
     }
@@ -124,22 +108,23 @@ const Login = () => {
       <div className="relative flex w-full max-w-md flex-col overflow-hidden rounded-3xl bg-(--white) shadow-(--shadow-md) lg:max-w-6xl lg:flex-row">
         {/* PANNEAU ACCÈS PROFESSIONNEL */}
         <div className="relative hidden min-h-162.5 flex-1 flex-col justify-between overflow-hidden p-12 text-(--white) lg:flex">
-          <img
-            src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1200&q=80"
-            alt="Institut SalonPro"
-            className="absolute inset-0 h-full w-full object-cover"
+          <div
+            className="absolute inset-0 h-full w-full"
+            style={{
+              backgroundImage: "linear-gradient(135deg, #111827 0%, #1e3a8a 100%)",
+            }}
           />
 
           <div className="absolute inset-0 bg-(--black)/75" />
           <div className="absolute inset-0 bg-linear-to-t from-(--black)/90 via-(--black)/60 to-(--black)/40" />
 
-          <div className="absolute -top-20 -right-16 h-72 w-72 rounded-full bg-rose-300/25 blur-3xl" />
-          <div className="absolute -bottom-24 -left-16 h-64 w-64 rounded-full bg-rose-400/15 blur-3xl" />
+          <div className="absolute -top-20 -right-16 h-72 w-72 rounded-full bg-blue-400/20 blur-3xl" />
+          <div className="absolute -bottom-24 -left-16 h-64 w-64 rounded-full bg-blue-500/15 blur-3xl" />
 
           <div className="relative z-10">
             <a href="/" className="flex items-center gap-3">
               <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-(--champagne) font-title text-lg font-bold text-(--black)">
-                AK
+                SP
               </span>
 
               <span className="flex flex-col leading-none">
@@ -182,7 +167,7 @@ const Login = () => {
                 transition={{ duration: 0.4, delay: 0.2 + index * 0.1 }}
                 className="flex items-start gap-4 rounded-2xl border border-(--white)/10 bg-(--white)/10 p-5 backdrop-blur-sm"
               >
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-rose-200/15 text-rose-200">
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-200/15 text-blue-200">
                   <Icon size={20} />
                 </span>
 
@@ -208,7 +193,7 @@ const Login = () => {
             {/* Logo mobile (le panneau pro n'est visible qu'à partir de lg) */}
             <a href="/" className="mb-8 flex items-center gap-3 lg:hidden">
               <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-(--black) font-title text-base font-bold text-(--champagne)">
-                AK
+                SP
               </span>
               <span className="flex flex-col leading-none">
                 <span className="font-title text-lg tracking-[0.15em] text-(--black)">

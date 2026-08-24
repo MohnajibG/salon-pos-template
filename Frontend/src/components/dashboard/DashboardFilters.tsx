@@ -36,8 +36,8 @@ export default function DashboardFilters({
   setEndDate,
 }: DashboardFiltersProps) {
   return (
-    <section className="rounded-3xl border border-[#eadfce] bg-white p-6">
-      <p className="text-xs uppercase tracking-[0.4em] text-[#8b7560]">ADMIN</p>
+    <section className="rounded-3xl border border-[#e5e7eb] bg-white p-6">
+      <p className="text-xs uppercase tracking-[0.4em] text-[#6b7280]">ADMIN</p>
 
       <h1 className="mt-3 font-serif text-3xl font-bold">Dashboard</h1>
 
@@ -53,8 +53,8 @@ export default function DashboardFilters({
               onClick={() => setPeriod(option.value)}
               className={`rounded-xl px-4 py-2 text-sm font-medium transition ${
                 period === option.value
-                  ? "bg-[#3E2C23] text-[#FFF4D6]"
-                  : "bg-[#f7f4ee] text-gray-600 hover:bg-[#eadfce]"
+                  ? "bg-[#2563eb] text-[#ffffff]"
+                  : "bg-[#f3f4f6] text-gray-600 hover:bg-[#e5e7eb]"
               }`}
             >
               {option.label}
@@ -67,7 +67,7 @@ export default function DashboardFilters({
             type="date"
             value={date}
             onChange={(e) => setDate(e.target.value)}
-            className="rounded-xl border border-[#eadfce] px-4 py-2 text-sm"
+            className="rounded-xl border border-[#e5e7eb] px-4 py-2 text-sm"
           />
         ) : (
           <div className="flex items-center gap-2">
@@ -75,7 +75,7 @@ export default function DashboardFilters({
               type="date"
               value={startDate}
               onChange={(e) => setStartDate(e.target.value)}
-              className="rounded-xl border border-[#eadfce] px-4 py-2 text-sm"
+              className="rounded-xl border border-[#e5e7eb] px-4 py-2 text-sm"
             />
 
             <span className="text-sm text-gray-400">→</span>
@@ -84,7 +84,7 @@ export default function DashboardFilters({
               type="date"
               value={endDate}
               onChange={(e) => setEndDate(e.target.value)}
-              className="rounded-xl border border-[#eadfce] px-4 py-2 text-sm"
+              className="rounded-xl border border-[#e5e7eb] px-4 py-2 text-sm"
             />
           </div>
         )}

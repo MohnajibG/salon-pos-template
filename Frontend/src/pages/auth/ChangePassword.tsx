@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import axios from "axios";
 import { Eye, EyeOff, Loader2 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import api from "../../api/axios";
 
 type Role = "admin" | "cashier" | "employee";
 
@@ -103,33 +105,10 @@ const ChangePassword = () => {
     try {
       setLoading(true);
 
-      const token = localStorage.getItem("token");
-
-      const response = await fetch(
-        "https://site--ankelk--dnxhn8mdblq5.code.run/api/auth/change-password",
-        {
-          method: "PATCH",
-
-          headers: {
-            "Content-Type": "application/json",
-
-            Authorization: `Bearer ${token}`,
-          },
-
-          body: JSON.stringify({
-            currentPassword,
-            newPassword,
-          }),
-        },
-      );
-
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(
-          data.message ?? "Erreur lors du changement de mot de passe",
-        );
-      }
+      await api.patch("/auth/change-password", {
+        currentPassword,
+        newPassword,
+      });
 
       const storedUser = localStorage.getItem("user");
 
@@ -160,7 +139,12 @@ const ChangePassword = () => {
         replace: true,
       });
     } catch (error: unknown) {
-      setError(error instanceof Error ? error.message : "Erreur serveur");
+      const message = axios.isAxiosError<{ message?: string }>(error)
+        ? (error.response?.data?.message ??
+          "Erreur lors du changement de mot de passe")
+        : "Erreur serveur";
+
+      setError(message);
     } finally {
       setLoading(false);
     }

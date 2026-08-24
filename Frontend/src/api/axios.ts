@@ -11,8 +11,9 @@ const getBaseURL = () => {
     return "http://localhost:3000/api";
   }
 
-  // Production
-  return "https://site--ankelk--dnxhn8mdblq5.code.run/api";
+  // Production : définir VITE_API_URL, sinon on suppose une API
+  // servie sur le même domaine (reverse proxy) sous /api.
+  return "/api";
 };
 
 const api = axios.create({

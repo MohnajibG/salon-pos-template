@@ -1,30 +1,13 @@
 import { motion } from "framer-motion";
+import ImagePlaceholder from "../ui/ImagePlaceholder";
 
 const galleryImages = [
-  {
-    src: "https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=1200&q=90",
-    title: "Espace beauté",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=90",
-    title: "Coiffure & soins",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1487412912498-0447578fcca8?auto=format&fit=crop&w=1200&q=90",
-    title: "Mise en beauté",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&w=1200&q=90",
-    title: "Moment détente",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=1200&q=90",
-    title: "Expertise beauté",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=1200&q=90",
-    title: "Soin personnalisé",
-  },
+  { title: "Espace beauté" },
+  { title: "Coiffure & soins" },
+  { title: "Mise en beauté" },
+  { title: "Moment détente" },
+  { title: "Expertise beauté" },
+  { title: "Soin personnalisé" },
 ];
 
 const Gallery = () => (
@@ -58,7 +41,7 @@ const Gallery = () => (
       <div className="mt-14 flex flex-wrap gap-6">
         {galleryImages.map((image, index) => (
           <motion.div
-            key={image.src}
+            key={image.title}
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -67,11 +50,7 @@ const Gallery = () => (
             className="group relative w-full overflow-hidden rounded-3xl border border-(--white)/10 bg-(--white)/5 p-2 backdrop-blur-md sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
           >
             <div className="relative overflow-hidden rounded-[22px]">
-              <img
-                src={image.src}
-                alt={image.title}
-                className="h-90 w-full object-cover transition duration-700 group-hover:scale-110"
-              />
+              <ImagePlaceholder className="h-90 w-full transition duration-700 group-hover:scale-110" />
 
               <div className="absolute inset-0 bg-linear-to-t from-(--black)/80 via-transparent to-transparent opacity-0 transition duration-500 group-hover:opacity-100" />
 
