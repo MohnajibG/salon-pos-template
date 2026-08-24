@@ -1,6 +1,7 @@
 import { CalendarClock, User } from "lucide-react";
 
 import type { Appointment } from "../../types/appointment";
+import { formatMoney } from "../../config/currency";
 
 type Props = {
   appointments: Appointment[];
@@ -42,7 +43,7 @@ const WaitingAppointments = ({ appointments, selectAppointment }: Props) => {
             </div>
 
             <div className="font-semibold">
-              {appointment.estimatedPrice.toLocaleString("fr-FR")} DA
+              {formatMoney(appointment.estimatedPrice)}
             </div>
           </button>
         ))}

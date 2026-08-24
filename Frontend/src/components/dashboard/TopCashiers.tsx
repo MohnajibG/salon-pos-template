@@ -1,10 +1,9 @@
 import type { DashboardData } from "../../api/dashboard.api";
+import { formatMoney as money } from "../../config/currency";
 
 interface TopCashiersProps {
   data: DashboardData;
 }
-
-const money = (value: number) => `${value.toLocaleString("fr-FR")} DA`;
 
 export default function TopCashiers({ data }: TopCashiersProps) {
   return (

@@ -13,6 +13,7 @@ import PageHeader from "../../components/ui/PageHeader";
 import StatCard from "../../components/ui/StatCard";
 import SearchBar from "../../components/ui/SearchBar";
 import LoadingState from "../../components/ui/LoadingState";
+import { formatMoney } from "../../config/currency";
 
 type ModalType = "view" | "edit" | "cancel" | null;
 
@@ -124,7 +125,7 @@ const Tickets = () => {
           <StatCard
             icon={HandCoins}
             title="Chiffre d'affaires"
-            value={`${totalRevenue.toLocaleString("fr-FR")} DA`}
+            value={formatMoney(totalRevenue)}
             accent="gold"
           />
         </div>

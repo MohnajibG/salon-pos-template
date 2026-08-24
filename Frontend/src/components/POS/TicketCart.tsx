@@ -1,6 +1,7 @@
 import { Receipt, Trash2 } from "lucide-react";
 
 import type { Employee } from "../../types/employee";
+import { SPECIALITY_LABELS } from "../../types/speciality";
 import type { CartItem } from "../../hooks/usePOS";
 
 type Props = {
@@ -68,7 +69,8 @@ const TicketCart = ({
                 {employees.map((employee) => (
                   <option key={employee._id} value={employee._id}>
                     {employee.firstName} {employee.lastName}
-                    {employee.speciality && ` - ${employee.speciality}`}
+                    {employee.speciality &&
+                      ` - ${SPECIALITY_LABELS[employee.speciality]}`}
                   </option>
                 ))}
               </select>

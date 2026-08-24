@@ -3,12 +3,11 @@ import { motion } from "framer-motion";
 import { TrendingUp } from "lucide-react";
 
 import type { DashboardData } from "../../api/dashboard.api";
+import { formatMoney as money } from "../../config/currency";
 
 interface EvolutionChartProps {
   data: DashboardData;
 }
-
-const money = (value: number) => `${value.toLocaleString("fr-FR")} DA`;
 
 export default function EvolutionChart({ data }: EvolutionChartProps) {
   const maxEvolutionRevenue = useMemo(() => {

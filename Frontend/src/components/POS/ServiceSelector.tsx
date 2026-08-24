@@ -3,6 +3,7 @@ import { ChevronDown, ChevronUp, Search } from "lucide-react";
 import { motion } from "framer-motion";
 
 import type { Service } from "../../types/service";
+import { CURRENCY_LABEL } from "../../config/currency";
 
 type Props = {
   services: Service[];
@@ -86,7 +87,7 @@ const ServiceSelector = ({
                       </div>
 
                       <strong className="shrink-0 text-sm">
-                        {service.price} DA
+                        {service.price} {CURRENCY_LABEL}
                       </strong>
                     </div>
                   </motion.button>

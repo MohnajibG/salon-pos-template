@@ -4,6 +4,7 @@ import type { CreateServicePayload, Service } from "../../types/service";
 import { SPECIALITIES, SPECIALITY_LABELS } from "../../types/speciality";
 
 import type { Category } from "../../types/category";
+import { CURRENCY_LABEL } from "../../config/currency";
 
 interface Props {
   categories: Category[];
@@ -29,7 +30,7 @@ const ServiceForm = ({
       typeof initialData?.category === "object"
         ? initialData.category._id
         : (initialData?.category ?? ""),
-    speciality: initialData?.speciality ?? "Hair",
+    speciality: initialData?.speciality ?? "Category1",
   });
 
   const updateField = (
@@ -108,7 +109,7 @@ const ServiceForm = ({
 
       <div className="flex flex-col gap-4 md:flex-row">
         <div className="md:flex-1">
-          <label className="mb-2 block text-sm font-medium">Prix (DA)</label>
+          <label className="mb-2 block text-sm font-medium">Prix ({CURRENCY_LABEL})</label>
           <input
             className="h-11 w-full rounded-2xl border border-(--border) bg-(--cream) px-4"
             type="number"

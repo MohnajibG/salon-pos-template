@@ -12,6 +12,7 @@ import { useEffect, useState } from "react";
 import { getMyEmployeeProfile } from "../../api/employee.api";
 
 import type { Employee } from "../../types/employee";
+import { SPECIALITY_LABELS } from "../../types/speciality";
 
 const Profile = () => {
   const [employee, setEmployee] = useState<Employee | null>(null);
@@ -70,7 +71,7 @@ const Profile = () => {
 
               {" · "}
 
-              {employee.speciality ?? "-"}
+              {(employee.speciality ? SPECIALITY_LABELS[employee.speciality] : "-")}
             </p>
 
             <div className="mt-4 inline-flex items-center gap-2 rounded-full bg-green-100 px-4 py-2 text-sm font-semibold text-green-700">
@@ -148,7 +149,7 @@ const Profile = () => {
             <Info
               icon={<Sparkles size={18} />}
               label="Spécialité"
-              value={employee.speciality ?? "-"}
+              value={(employee.speciality ? SPECIALITY_LABELS[employee.speciality] : "-")}
             />
 
             <Info

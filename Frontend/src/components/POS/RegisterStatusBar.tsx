@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { CalendarDays, Clock, Lock, Wallet } from "lucide-react";
 
 import type { CashRegister } from "../../types/cashRegister";
+import { CURRENCY_LABEL } from "../../config/currency";
 
 type Props = {
   register: CashRegister;
@@ -60,7 +61,7 @@ const RegisterStatusBar = ({ register, onRequestClose }: Props) => {
           <div className="mt-1 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-(--cream)/70">
             <Clock size={14} />
             Ouverte à {formatTime(register.openedAt)} • Depuis {duration} •
-            Fond {register.openingAmount} DA
+            Fond {register.openingAmount} {CURRENCY_LABEL}
           </div>
         </div>
       </div>
@@ -69,7 +70,7 @@ const RegisterStatusBar = ({ register, onRequestClose }: Props) => {
         <div className="text-right">
           <p className="text-xs text-(--cream)/50">Encaissé aujourd'hui</p>
           <p className="text-xl font-bold text-(--champagne)">
-            {totalToday} DA
+            {totalToday} {CURRENCY_LABEL}
           </p>
         </div>
 

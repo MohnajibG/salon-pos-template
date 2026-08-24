@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Loader2, Lock, TrendingDown, TrendingUp, X } from "lucide-react";
 
 import type { CashRegister } from "../../types/cashRegister";
+import { CURRENCY_LABEL } from "../../config/currency";
 
 type Props = {
   register: CashRegister;
@@ -25,7 +26,7 @@ const CloseRegisterModal = ({
   error,
   title = "Fermeture de caisse",
   subtitle = `Résumé de la journée du ${register.date}`,
-  amountLabel = "Comptage réel (DA)",
+  amountLabel = `Comptage réel (${CURRENCY_LABEL})`,
   submitLabel = "Clôturer la caisse",
   loadingLabel = "Fermeture...",
   showPreviousClose = false,
@@ -71,7 +72,7 @@ const CloseRegisterModal = ({
         <div className="mt-6 flex flex-wrap gap-3 rounded-2xl bg-(--surface) p-4 text-sm">
           <div className="w-[calc(50%-6px)]">
             <p className="text-(--muted)">Fond de départ</p>
-            <p className="font-semibold">{register.openingAmount} DA</p>
+            <p className="font-semibold">{register.openingAmount} {CURRENCY_LABEL}</p>
           </div>
           <div className="w-[calc(50%-6px)]">
             <p className="text-(--muted)">Tickets encaissés</p>
@@ -79,19 +80,19 @@ const CloseRegisterModal = ({
           </div>
           <div className="w-[calc(50%-6px)]">
             <p className="text-(--muted)">Espèces encaissées</p>
-            <p className="font-semibold">{register.totals.cash} DA</p>
+            <p className="font-semibold">{register.totals.cash} {CURRENCY_LABEL}</p>
           </div>
           <div className="w-[calc(50%-6px)]">
             <p className="text-(--muted)">Carte / Virement</p>
             <p className="font-semibold">
-              {register.totals.card + register.totals.transfer} DA
+              {register.totals.card + register.totals.transfer} {CURRENCY_LABEL}
             </p>
           </div>
           <div className="w-full border-t border-(--border) pt-3">
             <p className="text-(--muted)">
               Montant attendu en caisse (espèces)
             </p>
-            <p className="text-lg font-bold">{expected} DA</p>
+            <p className="text-lg font-bold">{expected} {CURRENCY_LABEL}</p>
           </div>
         </div>
 
@@ -103,7 +104,7 @@ const CloseRegisterModal = ({
             <div className="flex flex-wrap gap-3">
               <div className="w-[calc(50%-6px)]">
                 <p className="text-(--muted)">Comptage</p>
-                <p className="font-semibold">{register.closingAmount} DA</p>
+                <p className="font-semibold">{register.closingAmount} {CURRENCY_LABEL}</p>
               </div>
               <div className="w-[calc(50%-6px)]">
                 <p className="text-(--muted)">Écart</p>
@@ -118,7 +119,7 @@ const CloseRegisterModal = ({
                 >
                   {register.difference === 0
                     ? "Aucun"
-                    : `${register.difference && register.difference > 0 ? "+" : ""}${register.difference} DA`}
+                    : `${register.difference && register.difference > 0 ? "+" : ""}${register.difference} ${CURRENCY_LABEL}`}
                 </p>
               </div>
               {register.notes && (
@@ -163,8 +164,8 @@ const CloseRegisterModal = ({
               {difference === 0
                 ? "Caisse juste, aucun écart"
                 : difference > 0
-                  ? `Excédent de ${difference} DA`
-                  : `Manque de ${Math.abs(difference)} DA`}
+                  ? `Excédent de ${difference} ${CURRENCY_LABEL}`
+                  : `Manque de ${Math.abs(difference)} ${CURRENCY_LABEL}`}
             </div>
           )}
 

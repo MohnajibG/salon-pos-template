@@ -5,6 +5,7 @@ import { Mail, ShieldCheck, UserRound, Briefcase } from "lucide-react";
 import { authApi } from "../../api/auth.api";
 
 import type { AuthUser } from "../../types/auth";
+import { SPECIALITY_LABELS } from "../../types/speciality";
 
 const Profile = () => {
   const [user, setUser] = useState<AuthUser | null>(null);
@@ -96,7 +97,14 @@ const Profile = () => {
             <InfoCard
               icon={Briefcase}
               label="Spécialité"
-              value={user.speciality || "Non renseignée"}
+              value={
+                (user.speciality &&
+                  SPECIALITY_LABELS[
+                    user.speciality as keyof typeof SPECIALITY_LABELS
+                  ]) ||
+                user.speciality ||
+                "Non renseignée"
+              }
             />
 
             <InfoCard

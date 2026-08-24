@@ -1,6 +1,7 @@
 import { Eye, Pencil, XCircle } from "lucide-react";
 import type { Ticket } from "../../types/ticket";
 import Badge from "../ui/Badge";
+import { CURRENCY_LABEL } from "../../config/currency";
 
 interface TicketTableProps {
   tickets: Ticket[];
@@ -61,7 +62,7 @@ const TicketTable = ({ tickets, onView, onEdit, onCancel }: TicketTableProps) =>
                       ? `${employee.firstName} ${employee.lastName}`
                       : "-"}
                   </td>
-                  <td className="px-6 py-4 font-semibold">{ticket.total} DA</td>
+                  <td className="px-6 py-4 font-semibold">{ticket.total} {CURRENCY_LABEL}</td>
                   <td className="px-6 py-4 capitalize">
                     {ticket.paymentMethod}
                   </td>

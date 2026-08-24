@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Loader2, Wallet, X } from "lucide-react";
 
 import type { Employee } from "../../types/employee";
+import { CURRENCY_LABEL } from "../../config/currency";
 
 interface AdminOpenRegisterModalProps {
   open: boolean;
@@ -115,7 +116,7 @@ const AdminOpenRegisterModal = ({
 
           <div>
             <label className="mb-2 block text-sm font-semibold text-(--text)">
-              Fond de caisse (DA)
+              Fond de caisse ({CURRENCY_LABEL})
             </label>
             <div className="flex items-center gap-3 rounded-xl border border-(--border) px-3">
               <Wallet size={18} className="text-(--brown)" />

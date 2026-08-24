@@ -5,6 +5,7 @@ import type { Service } from "../../types/service";
 import type { Employee } from "../../types/employee";
 import type { AppointmentService } from "../../types/appointment";
 import { SPECIALITY_LABELS } from "../../types/speciality";
+import { CURRENCY_LABEL } from "../../config/currency";
 
 interface AppointmentServicesSelectorProps {
   services: Service[];
@@ -262,7 +263,7 @@ const AppointmentServicesSelector = ({
                             ${isActive ? "text-(--cream)" : "text-stone-500"}
                             `}
                           >
-                            {service.price} DA
+                            {service.price} {CURRENCY_LABEL}
                             {" • "}
                             {service.duration} min
                           </p>

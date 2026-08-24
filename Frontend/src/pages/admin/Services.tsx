@@ -17,6 +17,7 @@ import EditServiceModal from "../../components/service/EditServiceModal";
 import ViewServiceModal from "../../components/service/ViewServiceModal";
 import DeleteServiceModal from "../../components/service/DeleteServiceModal";
 import StatCard from "../../components/ui/StatCard";
+import { CURRENCY_LABEL } from "../../config/currency";
 
 type ModalType = "add" | "edit" | "view" | "delete" | null;
 
@@ -171,7 +172,7 @@ const Services = () => {
           <StatCard
             icon={HandCoins}
             title="Valeur totale"
-            value={`${totalPrice} DA`}
+            value={`${totalPrice} ${CURRENCY_LABEL}`}
           />
         </div>
         <div className="w-full *:h-full sm:w-[calc(50%-8px)] xl:w-[calc(25%-12px)]">

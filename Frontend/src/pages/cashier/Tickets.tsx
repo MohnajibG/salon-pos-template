@@ -3,6 +3,7 @@ import { Eye, Search, Receipt, XCircle, X } from "lucide-react";
 import useTickets from "../../hooks/useTickets";
 
 import type { TicketStatus } from "../../types/ticket";
+import { formatMoney, CURRENCY_LABEL } from "../../config/currency";
 
 const statusLabels: Record<TicketStatus, string> = {
   waiting_payment: "En attente de paiement",
@@ -110,7 +111,7 @@ const CashierTickets = () => {
 
                 <div className="flex flex-col items-start gap-2 md:items-end">
                   <strong className="text-xl text-(--black)">
-                    {ticket.total.toLocaleString("fr-FR")} DA
+                    {formatMoney(ticket.total)}
                   </strong>
 
                   <span className="rounded-full bg-white px-3 py-1 text-xs">
@@ -182,7 +183,7 @@ const CashierTickets = () => {
                     </p>
                   </div>
 
-                  <strong>{item.finalPrice.toLocaleString("fr-FR")} DA</strong>
+                  <strong>{formatMoney(item.finalPrice)}</strong>
                 </div>
               ))}
 
@@ -190,7 +191,7 @@ const CashierTickets = () => {
                 <div className="flex justify-between border-t border-(--border) pt-3 text-sm">
                   <span>Remise</span>
 
-                  <strong>-{selectedTicket.discount} DA</strong>
+                  <strong>-{selectedTicket.discount} {CURRENCY_LABEL}</strong>
                 </div>
               )}
 
@@ -198,7 +199,7 @@ const CashierTickets = () => {
                 <span>Total</span>
 
                 <strong className="text-(--black)">
-                  {selectedTicket.total.toLocaleString("fr-FR")} DA
+                  {formatMoney(selectedTicket.total)}
                 </strong>
               </div>
             </div>

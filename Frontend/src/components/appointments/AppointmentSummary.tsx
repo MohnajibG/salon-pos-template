@@ -2,6 +2,7 @@ import { useMemo } from "react";
 import { Clock, HandCoins, Sparkles } from "lucide-react";
 
 import type { AppointmentService } from "../../types/appointment";
+import { CURRENCY_LABEL } from "../../config/currency";
 
 interface AppointmentSummaryProps {
   services: AppointmentService[];
@@ -176,7 +177,7 @@ const AppointmentSummary = ({
                   font-bold
                   "
               >
-                {service.price} DA
+                {service.price} {CURRENCY_LABEL}
               </span>
             </div>
 
@@ -263,7 +264,7 @@ const AppointmentSummary = ({
             text-stone-500
             "
           >
-            Automatique :{calculatedValues.price} DA
+            Automatique :{calculatedValues.price} {CURRENCY_LABEL}
           </p>
         </div>
 

@@ -35,6 +35,7 @@ import { getEmployees } from "../api/employee.api";
 
 import type { Service } from "../types/service";
 import type { Employee } from "../types/employee";
+import { CURRENCY_LABEL } from "../config/currency";
 
 const statusLabels: Record<AppointmentStatus, string> = {
   pending: "En attente",
@@ -449,7 +450,7 @@ const Appointments = () => {
                         {employeeNames(appointment)}
                       </span>
                       <span className="font-semibold text-(--black)">
-                        {moneyFormat.format(appointment.estimatedPrice)} DA
+                        {moneyFormat.format(appointment.estimatedPrice)} {CURRENCY_LABEL}
                       </span>
                     </div>
 
@@ -560,7 +561,7 @@ const Appointments = () => {
                       </td>
 
                       <td className="whitespace-nowrap px-4 py-3">
-                        {moneyFormat.format(appointment.estimatedPrice)} DA
+                        {moneyFormat.format(appointment.estimatedPrice)} {CURRENCY_LABEL}
                       </td>
 
                       <td className="px-4 py-3">

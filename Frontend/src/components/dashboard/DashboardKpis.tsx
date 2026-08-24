@@ -11,12 +11,11 @@ import {
 
 import type { DashboardData } from "../../api/dashboard.api";
 import KpiCard from "./KpiCard";
+import { formatMoney as money } from "../../config/currency";
 
 interface DashboardKpisProps {
   data: DashboardData;
 }
-
-const money = (value: number) => `${value.toLocaleString("fr-FR")} DA`;
 
 export default function DashboardKpis({ data }: DashboardKpisProps) {
   return (

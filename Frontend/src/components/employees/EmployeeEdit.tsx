@@ -77,7 +77,7 @@ const EmployeeEdit = () => {
         lastName: form.lastName,
         phone: form.phone,
         role: form.role,
-        speciality: form.speciality ?? "Hair",
+        speciality: form.speciality ?? "Category1",
       });
 
       navigate(`/admin/employees/${id}`);
@@ -115,7 +115,7 @@ const EmployeeEdit = () => {
 
     role: employee.role,
 
-    speciality: employee.speciality ?? "Hair",
+    speciality: employee.speciality ?? "Category1",
   };
 
   return (

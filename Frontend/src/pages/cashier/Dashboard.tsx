@@ -14,6 +14,7 @@ import PageHeader from "../../components/ui/PageHeader";
 import StatCard from "../../components/ui/StatCard";
 import LoadingState from "../../components/ui/LoadingState";
 import Badge from "../../components/ui/Badge";
+import { formatMoney } from "../../config/currency";
 
 const CashierDashboard = () => {
   const [tickets, setTickets] = useState<Ticket[]>([]);
@@ -105,7 +106,7 @@ const CashierDashboard = () => {
           <StatCard
             icon={DollarSign}
             title="Chiffre du jour"
-            value={`${totalToday.toLocaleString("fr-FR")} DA`}
+            value={formatMoney(totalToday)}
             accent="black"
           />
         </div>
@@ -169,7 +170,7 @@ const CashierDashboard = () => {
 
                 <div className="sm:text-right">
                   <p className="font-bold text-(--brown-dark)">
-                    {ticket.total.toLocaleString("fr-FR")} DA
+                    {formatMoney(ticket.total)}
                   </p>
 
                   <p className="flex items-center gap-1 text-xs text-(--muted) sm:justify-end">

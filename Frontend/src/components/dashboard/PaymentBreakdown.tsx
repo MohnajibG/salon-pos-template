@@ -2,12 +2,11 @@ import { useMemo } from "react";
 import { CreditCard } from "lucide-react";
 
 import type { DashboardData } from "../../api/dashboard.api";
+import { formatMoney as money } from "../../config/currency";
 
 interface PaymentBreakdownProps {
   data: DashboardData;
 }
-
-const money = (value: number) => `${value.toLocaleString("fr-FR")} DA`;
 
 export default function PaymentBreakdown({ data }: PaymentBreakdownProps) {
   const maxPaymentRevenue = useMemo(() => {

@@ -8,6 +8,7 @@ import { updateTicket } from "../../api/ticket.api";
 import type { Service } from "../../types/service";
 import type { Employee } from "../../types/employee";
 import type { PaymentMethod, Ticket } from "../../types/ticket";
+import { CURRENCY_LABEL } from "../../config/currency";
 
 interface EditableItem {
   service: string;
@@ -209,7 +210,7 @@ const EditTicketModal = ({ ticket, onClose, onSaved }: EditTicketModalProps) => 
               <div className="mt-3 flex flex-col gap-3 sm:flex-row">
                 <div className="sm:flex-1">
                   <label className="mb-1 block text-xs font-medium">
-                    Prix final (DA)
+                    Prix final ({CURRENCY_LABEL})
                   </label>
                   <input
                     type="number"
@@ -256,7 +257,7 @@ const EditTicketModal = ({ ticket, onClose, onSaved }: EditTicketModalProps) => 
             <option value="">Ajouter une prestation...</option>
             {services.map((service) => (
               <option key={service._id} value={service._id}>
-                {service.name} — {service.price} DA
+                {service.name} — {service.price} {CURRENCY_LABEL}
               </option>
             ))}
           </select>
@@ -274,7 +275,7 @@ const EditTicketModal = ({ ticket, onClose, onSaved }: EditTicketModalProps) => 
 
         <div className="flex flex-col gap-3 sm:flex-row">
           <div className="sm:flex-1">
-            <label className="mb-2 block text-sm font-medium">Remise (DA)</label>
+            <label className="mb-2 block text-sm font-medium">Remise ({CURRENCY_LABEL})</label>
             <input
               type="number"
               value={discount}
@@ -316,8 +317,8 @@ const EditTicketModal = ({ ticket, onClose, onSaved }: EditTicketModalProps) => 
         />
 
         <div className="flex items-center justify-between rounded-2xl bg-(--surface) p-4">
-          <span className="text-sm text-(--muted)">Sous-total {subtotal} DA</span>
-          <strong className="text-lg">Total {total} DA</strong>
+          <span className="text-sm text-(--muted)">Sous-total {subtotal} {CURRENCY_LABEL}</span>
+          <strong className="text-lg">Total {total} {CURRENCY_LABEL}</strong>
         </div>
 
         <div className="flex gap-3">

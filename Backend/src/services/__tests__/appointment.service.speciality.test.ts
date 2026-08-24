@@ -37,7 +37,7 @@ describe("buildAppointmentSnapshot - correspondance spécialité", () => {
       {
         _id: { toString: () => SERVICE_ID },
         name: "Manucure",
-        speciality: "Nails",
+        speciality: "Category2",
         price: 1000,
         duration: 30,
       },
@@ -48,7 +48,7 @@ describe("buildAppointmentSnapshot - correspondance spécialité", () => {
         _id: { toString: () => EMPLOYEE_ID },
         firstName: "Sarah",
         lastName: "Martin",
-        speciality: "Hair",
+        speciality: "Category1",
       },
     ]);
 
@@ -65,7 +65,7 @@ describe("buildAppointmentSnapshot - correspondance spécialité", () => {
       {
         _id: { toString: () => SERVICE_ID },
         name: "Coupe",
-        speciality: "Hair",
+        speciality: "Category1",
         price: 1500,
         duration: 45,
       },
@@ -76,7 +76,7 @@ describe("buildAppointmentSnapshot - correspondance spécialité", () => {
         _id: { toString: () => EMPLOYEE_ID },
         firstName: "Sarah",
         lastName: "Martin",
-        speciality: "Hair",
+        speciality: "Category1",
       },
     ]);
 
@@ -106,7 +106,7 @@ describe("buildAppointmentSnapshot - correspondance spécialité", () => {
         _id: { toString: () => EMPLOYEE_ID },
         firstName: "Sarah",
         lastName: "Martin",
-        speciality: "Hair",
+        speciality: "Category1",
       },
     ]);
 

@@ -40,7 +40,7 @@ const defaultValues: EmployeeFormType = {
   email: "",
   phone: "",
   role: "employee",
-  speciality: "Hair",
+  speciality: "Category1",
 };
 
 const EmployeeForm = ({
@@ -65,7 +65,7 @@ const EmployeeForm = ({
     setForm((prev) => ({
       ...prev,
       role,
-      speciality: role === "employee" ? (prev.speciality ?? "Hair") : undefined,
+      speciality: role === "employee" ? (prev.speciality ?? "Category1") : undefined,
     }));
   };
 

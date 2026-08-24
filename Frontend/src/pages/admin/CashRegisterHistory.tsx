@@ -36,6 +36,7 @@ import AddExpenseModal from "../../components/expenses/AddExpenseModal";
 import CloseRegisterModal from "../../components/POS/CloseRegisterModal";
 import AdminOpenRegisterModal from "../../components/cashRegister/AdminOpenRegisterModal";
 import EditTicketModal from "../../components/ticket/EditTicketModal";
+import { CURRENCY_LABEL } from "../../config/currency";
 
 const CashRegisterHistory = () => {
   const [history, setHistory] = useState<CashRegister[]>([]);
@@ -344,7 +345,7 @@ const CashRegisterHistory = () => {
           <StatCard
             icon={HandCoins}
             title="Total encaissé"
-            value={`${totalRevenue} DA`}
+            value={`${totalRevenue} ${CURRENCY_LABEL}`}
           />
         </div>
         <div className="w-full *:h-full sm:w-[calc(50%-8px)] xl:w-[calc(33.333%-10.667px)]">
@@ -421,10 +422,10 @@ const CashRegisterHistory = () => {
                     >
                       <td className="px-6 py-4 font-semibold">{item.date}</td>
                       <td className="px-6 py-4">{cashierName}</td>
-                      <td className="px-6 py-4">{item.openingAmount} DA</td>
-                      <td className="px-6 py-4">{item.totals.cash} DA</td>
-                      <td className="px-6 py-4">{item.totals.card} DA</td>
-                      <td className="px-6 py-4">{item.totals.transfer} DA</td>
+                      <td className="px-6 py-4">{item.openingAmount} {CURRENCY_LABEL}</td>
+                      <td className="px-6 py-4">{item.totals.cash} {CURRENCY_LABEL}</td>
+                      <td className="px-6 py-4">{item.totals.card} {CURRENCY_LABEL}</td>
+                      <td className="px-6 py-4">{item.totals.transfer} {CURRENCY_LABEL}</td>
                       <td className="px-6 py-4">
                         {item.difference === undefined ? (
                           "-"
@@ -432,12 +433,12 @@ const CashRegisterHistory = () => {
                           <span className="text-green-600">Juste</span>
                         ) : item.difference > 0 ? (
                           <span className="flex items-center gap-1 text-blue-600">
-                            <TrendingUp size={14} />+{item.difference} DA
+                            <TrendingUp size={14} />+{item.difference} {CURRENCY_LABEL}
                           </span>
                         ) : (
                           <span className="flex items-center gap-1 text-red-600">
                             <TrendingDown size={14} />
-                            {item.difference} DA
+                            {item.difference} {CURRENCY_LABEL}
                           </span>
                         )}
                       </td>
@@ -584,7 +585,7 @@ const CashRegisterHistory = () => {
                                           : "Annulé"}
                                       </Badge>
                                       <span className="font-semibold">
-                                        {ticket.total} DA
+                                        {ticket.total} {CURRENCY_LABEL}
                                       </span>
 
                                       {ticket.status === "paid" &&
@@ -637,7 +638,7 @@ const CashRegisterHistory = () => {
             </p>
           </div>
 
-          <Badge variant="neutral">{totalExpenses} DA au total</Badge>
+          <Badge variant="neutral">{totalExpenses} {CURRENCY_LABEL} au total</Badge>
         </div>
 
         {expensesError && (
@@ -689,7 +690,7 @@ const CashRegisterHistory = () => {
                         : "Semi-variable"}
                     </Badge>
 
-                    <span className="font-semibold">{expense.amount} DA</span>
+                    <span className="font-semibold">{expense.amount} {CURRENCY_LABEL}</span>
 
                     <button
                       onClick={() => handleDeleteExpense(expense._id)}
@@ -743,7 +744,7 @@ const CashRegisterHistory = () => {
           error={finalizeError}
           title="Finalisation de la caisse"
           subtitle={`Verrouillage définitif — ${finalizeTarget.date}`}
-          amountLabel="Recomptage final (DA)"
+          amountLabel={`Recomptage final (${CURRENCY_LABEL})`}
           submitLabel="Finaliser définitivement"
           loadingLabel="Finalisation..."
           showPreviousClose

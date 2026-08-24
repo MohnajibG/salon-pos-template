@@ -4,6 +4,7 @@ import { Search, UserRound, X, Sparkles } from "lucide-react";
 import { getEmployees } from "../../api/employee.api";
 
 import type { Employee } from "../../types/employee";
+import { SPECIALITY_LABELS } from "../../types/speciality";
 
 interface Props {
   value?: Employee | null;
@@ -137,7 +138,7 @@ const EmployeeAutocomplete = ({ value, onChange }: Props) => {
                   {employee.speciality && (
                     <p className="mt-1 flex items-center gap-1 text-xs text-stone-500">
                       <Sparkles size={13} />
-                      {employee.speciality}
+                      {SPECIALITY_LABELS[employee.speciality]}
                     </p>
                   )}
                 </div>

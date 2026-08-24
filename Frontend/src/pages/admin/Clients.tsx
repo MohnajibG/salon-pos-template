@@ -18,6 +18,7 @@ import SearchBar from "../../components/ui/SearchBar";
 import EmptyState from "../../components/ui/EmptyState";
 import LoadingState from "../../components/ui/LoadingState";
 import ClientReliabilityBadge from "../../components/clients/ClientReliabilityBadge";
+import { formatMoney } from "../../config/currency";
 
 interface Client {
   _id: string;
@@ -94,7 +95,7 @@ const Clients = () => {
           <StatCard
             icon={Wallet}
             title="Chiffre cumulé"
-            value={`${totalSpent.toLocaleString("fr-FR")} DA`}
+            value={formatMoney(totalSpent)}
             accent="gold"
           />
         </div>
@@ -102,7 +103,7 @@ const Clients = () => {
           <StatCard
             icon={CalendarDays}
             title="Panier moyen"
-            value={`${avgSpent.toLocaleString("fr-FR")} DA`}
+            value={formatMoney(avgSpent)}
             accent="info"
           />
         </div>
@@ -178,7 +179,7 @@ const Clients = () => {
                 <div className="flex items-center gap-2 text-sm">
                   <Wallet size={17} className="text-(--brown)" />
                   <span className="font-semibold">
-                    {client.totalSpent.toLocaleString("fr-FR")} DA
+                    {formatMoney(client.totalSpent)}
                   </span>
                 </div>
 

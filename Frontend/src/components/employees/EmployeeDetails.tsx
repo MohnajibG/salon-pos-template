@@ -18,24 +18,26 @@ import {
 import { getEmployeeById } from "../../api/employee.api";
 
 import type { Employee } from "../../types/employee";
+import { SPECIALITY_LABELS } from "../../types/speciality";
+import { CURRENCY_LABEL } from "../../config/currency";
 
 const recentServices = [
   {
     client: "Emma Martin",
-    service: "Coloration cheveux",
-    price: "120 DA",
+    service: "Service 1",
+    price: `120 ${CURRENCY_LABEL}`,
     date: "Aujourd'hui • 10:30",
   },
   {
     client: "Julie Martin",
-    service: "Coupe cheveux",
-    price: "40 DA",
+    service: "Service 2",
+    price: `40 ${CURRENCY_LABEL}`,
     date: "Aujourd'hui • 09:00",
   },
   {
     client: "Sarah Lopez",
-    service: "Brushing",
-    price: "25 DA",
+    service: "Service 3",
+    price: `25 ${CURRENCY_LABEL}`,
     date: "Hier",
   },
 ];
@@ -154,7 +156,11 @@ const EmployeeDetails = () => {
               <Info
                 icon={<Sparkles size={18} />}
                 label="Spécialité"
-                value={employee.speciality || "Non définie"}
+                value={
+                  employee.speciality
+                    ? SPECIALITY_LABELS[employee.speciality]
+                    : "Non définie"
+                }
               />
             </div>
 
@@ -177,7 +183,7 @@ const EmployeeDetails = () => {
 
       <section className="flex flex-wrap gap-4">
         <div className="w-full *:h-full md:w-[calc(50%-8px)] xl:w-[calc(25%-12px)]">
-          <Card title="Chiffre généré" value="0 DA" icon={<Wallet />} />
+          <Card title="Chiffre généré" value={`0 ${CURRENCY_LABEL}`} icon={<Wallet />} />
         </div>
 
         <div className="w-full *:h-full md:w-[calc(50%-8px)] xl:w-[calc(25%-12px)]">
@@ -185,7 +191,7 @@ const EmployeeDetails = () => {
         </div>
 
         <div className="w-full *:h-full md:w-[calc(50%-8px)] xl:w-[calc(25%-12px)]">
-          <Card title="Panier moyen" value="0 DA" icon={<TrendingUp />} />
+          <Card title="Panier moyen" value={`0 ${CURRENCY_LABEL}`} icon={<TrendingUp />} />
         </div>
 
         <div className="w-full *:h-full md:w-[calc(50%-8px)] xl:w-[calc(25%-12px)]">

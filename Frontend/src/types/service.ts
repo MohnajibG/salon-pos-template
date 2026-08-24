@@ -4,10 +4,10 @@ export interface ServiceCategory {
 }
 
 export type ServiceSpeciality =
-  | "Hair"
-  | "Nails"
-  | "Makeup"
-  | "Massage"
+  | "Category1"
+  | "Category2"
+  | "Category3"
+  | "Category4"
   | "Reception";
 
 export interface Service {

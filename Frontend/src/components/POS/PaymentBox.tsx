@@ -1,6 +1,7 @@
 import { Banknote /* , CreditCard, WalletCards */ } from "lucide-react";
 
 import type { PaymentMethod } from "../../hooks/usePOS";
+import { CURRENCY_LABEL } from "../../config/currency";
 
 type Props = {
   total: number;
@@ -30,7 +31,7 @@ const PaymentBox = ({
         <div className="flex justify-between text-xl">
           <span>Total</span>
 
-          <strong>{total} DA</strong>
+          <strong>{total} {CURRENCY_LABEL}</strong>
         </div>
 
         <div className="mt-5 flex gap-2">

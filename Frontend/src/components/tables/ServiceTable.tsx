@@ -3,6 +3,7 @@ import { Clock, HandCoins, Eye, Pencil, Power, Trash2 } from "lucide-react";
 import type { Service } from "../../types/service";
 import { SPECIALITY_LABELS } from "../../types/speciality";
 import Badge from "../ui/Badge";
+import { CURRENCY_LABEL } from "../../config/currency";
 
 interface Props {
   services: Service[];
@@ -132,7 +133,7 @@ const ServiceTable = ({
 
           <div className="mt-4 space-y-2 text-sm">
             <p>
-              Prix : <b className="ml-2">{service.price} DA</b>
+              Prix : <b className="ml-2">{service.price} {CURRENCY_LABEL}</b>
             </p>
             <p>
               Durée : <b className="ml-2">{service.duration} min</b>

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Lock, Loader2, Wallet } from "lucide-react";
+import { CURRENCY_LABEL } from "../../config/currency";
 
 type Props = {
   onOpen: (amount: number) => Promise<unknown>;
@@ -44,7 +45,7 @@ const OpenRegisterModal = ({ onOpen, loading, error }: Props) => {
               step="1"
               value={amount}
               onChange={(e) => setAmount(e.target.value)}
-              placeholder="Montant en DA"
+              placeholder={`Montant en ${CURRENCY_LABEL}`}
               className="w-full bg-transparent text-lg font-semibold outline-none"
             />
           </div>

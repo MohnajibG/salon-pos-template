@@ -23,13 +23,13 @@ interface UpdateEmployeeData {
 const allowedRoles = ["employee", "cashier"] as const;
 
 const allowedSpecialities = [
-  "Hair",
-  "Nails",
-  "Makeup",
-  "Massage",
+  "Category1",
+  "Category2",
+  "Category3",
+  "Category4",
   "Reception",
-  "Waxing",
-  "Skincare",
+  "Category5",
+  "Category6",
 ] as const;
 
 const validateEmail = (email: string) =>

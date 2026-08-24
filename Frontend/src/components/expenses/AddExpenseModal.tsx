@@ -3,6 +3,7 @@ import { Loader2, X } from "lucide-react";
 
 import { createExpense } from "../../api/expense.api";
 import type { ExpenseType } from "../../types/expense";
+import { CURRENCY_LABEL } from "../../config/currency";
 
 interface AddExpenseModalProps {
   open: boolean;
@@ -132,7 +133,7 @@ const AddExpenseModal = ({ open, onClose, onCreated }: AddExpenseModalProps) => 
           <div className="flex gap-3">
             <div className="flex-1">
               <label className="mb-2 block text-sm font-semibold text-(--text)">
-                Montant (DA)
+                Montant ({CURRENCY_LABEL})
               </label>
               <input
                 type="number"

@@ -2,13 +2,13 @@ import Service, { ServiceSpeciality } from "../models/Service";
 import Category from "../models/Category";
 
 const SPECIALITIES: ServiceSpeciality[] = [
-  "Hair",
-  "Nails",
-  "Makeup",
-  "Massage",
+  "Category1",
+  "Category2",
+  "Category3",
+  "Category4",
   "Reception",
-  "Waxing",
-  "Skincare",
+  "Category5",
+  "Category6",
 ];
 
 /**

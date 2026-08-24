@@ -10,6 +10,7 @@ import { useEffect, useMemo, useState } from "react";
 
 import { getClients } from "../../api/client.api";
 import type { Client } from "../../types/client";
+import { CURRENCY_LABEL } from "../../config/currency";
 
 const Customers = () => {
   const [clients, setClients] = useState<Client[]>([]);
@@ -119,7 +120,7 @@ const Customers = () => {
                   <WalletCards size={15} />
                   Total
                 </div>
-                <p className="mt-2 font-bold">{client.totalSpent ?? 0} DA</p>
+                <p className="mt-2 font-bold">{client.totalSpent ?? 0} {CURRENCY_LABEL}</p>
               </div>
             </div>
 

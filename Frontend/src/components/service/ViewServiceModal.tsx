@@ -2,6 +2,7 @@ import { Clock, HandCoins, Layers, Tag, Sparkles, X } from "lucide-react";
 
 import type { Service } from "../../types/service";
 import { SPECIALITY_LABELS } from "../../types/speciality";
+import { CURRENCY_LABEL } from "../../config/currency";
 
 interface Props {
   service: Service;
@@ -65,7 +66,7 @@ const ViewServiceModal = ({ service, onClose }: Props) => {
           <InfoItem
             icon={<HandCoins size={20} />}
             label="Prix"
-            value={`${service.price} DA`}
+            value={`${service.price} ${CURRENCY_LABEL}`}
           />
 
           <InfoItem

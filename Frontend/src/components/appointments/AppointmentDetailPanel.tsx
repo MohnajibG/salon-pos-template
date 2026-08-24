@@ -11,6 +11,7 @@ import {
 } from "../../api/appointment.api";
 
 import type { Appointment, AppointmentStatus } from "../../types/appointment";
+import { CURRENCY_LABEL } from "../../config/currency";
 
 const STATUS_LABELS: Record<AppointmentStatus, string> = {
   pending: "En attente",
@@ -164,7 +165,7 @@ const AppointmentDetailPanel = ({
                   ? ""
                   : `${service.employee.firstName} ${service.employee.lastName}`}
               </span>
-              <span className="font-semibold">{service.price} DA</span>
+              <span className="font-semibold">{service.price} {CURRENCY_LABEL}</span>
             </div>
           ))}
         </div>

@@ -10,6 +10,7 @@ import PageHeader from "../../components/ui/PageHeader";
 import StatCard from "../../components/ui/StatCard";
 import LoadingState from "../../components/ui/LoadingState";
 import Badge from "../../components/ui/Badge";
+import { CURRENCY_LABEL } from "../../config/currency";
 
 const EmployeeDashboard = () => {
   const [employee, setEmployee] = useState<Employee | null>(null);
@@ -58,7 +59,7 @@ const EmployeeDashboard = () => {
           <StatCard
             icon={HandCoins}
             title="Chiffre du jour"
-            value="0 DA"
+            value={`0 ${CURRENCY_LABEL}`}
             accent="black"
           />
         </div>
@@ -82,7 +83,7 @@ const EmployeeDashboard = () => {
           <StatCard
             icon={TrendingUp}
             title="Chiffre du mois"
-            value="0 DA"
+            value={`0 ${CURRENCY_LABEL}`}
             accent="success"
           />
         </div>

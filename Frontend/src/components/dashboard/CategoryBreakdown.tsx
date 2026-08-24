@@ -2,12 +2,11 @@ import { useMemo } from "react";
 import { Layers } from "lucide-react";
 
 import type { DashboardData } from "../../api/dashboard.api";
+import { formatMoney as money } from "../../config/currency";
 
 interface CategoryBreakdownProps {
   data: DashboardData;
 }
-
-const money = (value: number) => `${value.toLocaleString("fr-FR")} DA`;
 
 export default function CategoryBreakdown({ data }: CategoryBreakdownProps) {
   const maxCategoryRevenue = useMemo(() => {

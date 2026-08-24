@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Eye, Pencil, Power, Trash2, Sparkles, Phone, Clock } from "lucide-react";
 
 import type { Employee } from "../../types/employee";
+import { SPECIALITY_LABELS } from "../../types/speciality";
 import Badge from "../ui/Badge";
 
 interface EmployeeCardProps {
@@ -43,7 +44,11 @@ const EmployeeCard = ({
 
       <div className="flex items-center gap-2 text-sm">
         <Sparkles size={17} className="text-(--brown)" />
-        <span>{employee.speciality || "Non définie"}</span>
+        <span>
+          {employee.speciality
+            ? SPECIALITY_LABELS[employee.speciality]
+            : "Non définie"}
+        </span>
       </div>
 
       <div className="flex items-center gap-2 text-sm text-(--muted)">

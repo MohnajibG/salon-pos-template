@@ -1,13 +1,13 @@
 import { Document, Schema, Types, model } from "mongoose";
 
 export type ServiceSpeciality =
-  | "Hair"
-  | "Nails"
-  | "Makeup"
-  | "Massage"
+  | "Category1"
+  | "Category2"
+  | "Category3"
+  | "Category4"
   | "Reception"
-  | "Waxing"
-  | "Skincare";
+  | "Category5"
+  | "Category6";
 
 export interface IService extends Document {
   name: string;
@@ -21,7 +21,7 @@ export interface IService extends Document {
 
   duration: number;
 
-  currency: "DZD";
+  currency: string;
 
   isActive: boolean;
   isDeleted: boolean;
@@ -59,13 +59,13 @@ const serviceSchema = new Schema<IService>(
     speciality: {
       type: String,
       enum: [
-        "Hair",
-        "Nails",
-        "Makeup",
-        "Massage",
+        "Category1",
+        "Category2",
+        "Category3",
+        "Category4",
         "Reception",
-        "Waxing",
-        "Skincare",
+        "Category5",
+        "Category6",
       ],
       required: true,
     },
@@ -86,7 +86,6 @@ const serviceSchema = new Schema<IService>(
     currency: {
       type: String,
       default: "DZD",
-      enum: ["DZD"],
     },
 
     isActive: {

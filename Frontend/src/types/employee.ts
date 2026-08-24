@@ -1,13 +1,13 @@
 export type EmployeeRole = "employee" | "cashier";
 
 export type Speciality =
-  | "Hair"
-  | "Nails"
-  | "Makeup"
-  | "Massage"
+  | "Category1"
+  | "Category2"
+  | "Category3"
+  | "Category4"
   | "Reception"
-  | "Waxing"
-  | "Skincare";
+  | "Category5"
+  | "Category6";
 
 export interface Employee {
   _id: string;

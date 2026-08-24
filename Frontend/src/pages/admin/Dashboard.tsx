@@ -27,6 +27,7 @@ import StatCard from "../../components/ui/StatCard";
 import LoadingState from "../../components/ui/LoadingState";
 import EmptyState from "../../components/ui/EmptyState";
 import Badge from "../../components/ui/Badge";
+import { formatMoney, CURRENCY_LABEL } from "../../config/currency";
 
 const periods: { value: DashboardPeriod; label: string }[] = [
   { value: "day", label: "Aujourd'hui" },
@@ -142,7 +143,7 @@ const Dashboard = () => {
           <StatCard
             icon={HandCoins}
             title="Chiffre d'affaires"
-            value={`${data.sales.current.revenue.toLocaleString("fr-FR")} DA`}
+            value={formatMoney(data.sales.current.revenue)}
             trend={{ value: Math.round(data.sales.change.revenue) }}
             accent="black"
           />
@@ -160,7 +161,7 @@ const Dashboard = () => {
           <StatCard
             icon={ShoppingBag}
             title="Panier moyen"
-            value={`${Math.round(data.averageBasket).toLocaleString("fr-FR")} DA`}
+            value={formatMoney(Math.round(data.averageBasket))}
             accent="info"
           />
         </div>
@@ -207,7 +208,7 @@ const Dashboard = () => {
             icon={TrendingDown}
             title="Annulations"
             value={`${Math.round(data.cancellation.rate)}%`}
-            footer={`${data.cancellation.cancelledValue.toLocaleString("fr-FR")} DA perdus`}
+            footer={`${formatMoney(data.cancellation.cancelledValue)} perdus`}
             accent="danger"
           />
         </div>
@@ -238,7 +239,7 @@ const Dashboard = () => {
                       style={{
                         height: `${(point.revenue / maxEvolution) * 100}%`,
                       }}
-                      title={`${point.revenue} DA`}
+                      title={`${point.revenue} ${CURRENCY_LABEL}`}
                     />
                   </div>
                   <span className="text-[10px] text-(--muted)">
@@ -271,7 +272,7 @@ const Dashboard = () => {
                     <span className="font-medium text-(--black)">
                       {paymentLabels[p._id] ?? p._id}
                     </span>
-                    <strong>{p.revenue.toLocaleString("fr-FR")} DA</strong>
+                    <strong>{formatMoney(p.revenue)}</strong>
                   </div>
                   <div className="mt-1.5 h-1.5 w-full overflow-hidden rounded-full bg-(--surface)">
                     <div
@@ -302,7 +303,7 @@ const Dashboard = () => {
             </div>
 
             <strong className="text-(--black)">
-              {(data.expenses?.total ?? 0).toLocaleString("fr-FR")} DA
+              {formatMoney(data.expenses?.total ?? 0)}
             </strong>
           </div>
 
@@ -315,7 +316,7 @@ const Dashboard = () => {
                       {expenseLabels[e._id] ?? e._id}
                     </span>
                     <strong>
-                      {e.total.toLocaleString("fr-FR")} DA
+                      {formatMoney(e.total)}
                       <span className="ml-2 font-normal text-(--muted)">
                         ({e.count})
                       </span>
@@ -365,7 +366,7 @@ const Dashboard = () => {
                       {service._id}
                     </span>
                     <strong>
-                      {service.revenue.toLocaleString("fr-FR")} DA
+                      {formatMoney(service.revenue)}
                     </strong>
                   </div>
                   <div className="mt-1.5 h-1.5 w-full overflow-hidden rounded-full bg-(--surface)">
@@ -404,7 +405,7 @@ const Dashboard = () => {
                     <span className="font-medium text-(--black)">
                       {cat.name}
                     </span>
-                    <strong>{cat.revenue.toLocaleString("fr-FR")} DA</strong>
+                    <strong>{formatMoney(cat.revenue)}</strong>
                   </div>
                   <div className="mt-1.5 h-1.5 w-full overflow-hidden rounded-full bg-(--surface)">
                     <div
@@ -456,7 +457,7 @@ const Dashboard = () => {
                       <p className="mt-3 text-sm text-(--muted)">
                         CA :{" "}
                         <strong className="text-(--black)">
-                          {employee.revenue.toLocaleString("fr-FR")} DA
+                          {formatMoney(employee.revenue)}
                         </strong>
                       </p>
                       <p className="text-sm text-(--muted)">
@@ -503,7 +504,7 @@ const Dashboard = () => {
                       <p className="mt-3 text-sm text-(--muted)">
                         Encaissé :{" "}
                         <strong className="text-(--black)">
-                          {cashier.revenue.toLocaleString("fr-FR")} DA
+                          {formatMoney(cashier.revenue)}
                         </strong>
                       </p>
                       <p className="text-sm text-(--muted)">

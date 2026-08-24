@@ -1,6 +1,7 @@
 import { History, X } from "lucide-react";
 
 import type { Ticket } from "../../types/ticket";
+import { CURRENCY_LABEL } from "../../config/currency";
 
 interface ViewTicketModalProps {
   ticket: Ticket;
@@ -81,7 +82,7 @@ const ViewTicketModal = ({ ticket, onClose }: ViewTicketModalProps) => {
                   <p className="text-xs text-(--muted)">{item.duration} min</p>
                 </div>
 
-                <p className="font-semibold">{item.finalPrice} DA</p>
+                <p className="font-semibold">{item.finalPrice} {CURRENCY_LABEL}</p>
               </div>
             ))}
           </div>
@@ -90,17 +91,17 @@ const ViewTicketModal = ({ ticket, onClose }: ViewTicketModalProps) => {
         <div className="mt-6 space-y-3 rounded-2xl bg-(--surface) p-4">
           <div className="flex justify-between text-sm">
             <span>Sous-total</span>
-            <span>{ticket.subtotal} DA</span>
+            <span>{ticket.subtotal} {CURRENCY_LABEL}</span>
           </div>
 
           <div className="flex justify-between text-sm">
             <span>Remise</span>
-            <span>- {ticket.discount} DA</span>
+            <span>- {ticket.discount} {CURRENCY_LABEL}</span>
           </div>
 
           <div className="flex justify-between border-t border-(--border) pt-3 text-lg font-bold">
             <span>Total</span>
-            <span>{ticket.total} DA</span>
+            <span>{ticket.total} {CURRENCY_LABEL}</span>
           </div>
         </div>
 
@@ -143,7 +144,7 @@ const ViewTicketModal = ({ ticket, onClose }: ViewTicketModalProps) => {
                       })}
                     </p>
                     <p className="mt-1 text-xs text-amber-700">
-                      Ancien total : {edit.previous.total} DA (
+                      Ancien total : {edit.previous.total} {CURRENCY_LABEL} (
                       {edit.previous.items.length} prestation
                       {edit.previous.items.length > 1 ? "s" : ""})
                     </p>

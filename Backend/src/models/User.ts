@@ -3,13 +3,13 @@ import { Schema, model, Document, Types } from "mongoose";
 export type UserRole = "admin" | "cashier" | "employee";
 
 export type Speciality =
-  | "Hair"
-  | "Nails"
-  | "Makeup"
-  | "Massage"
+  | "Category1"
+  | "Category2"
+  | "Category3"
+  | "Category4"
   | "Reception"
-  | "Waxing"
-  | "Skincare";
+  | "Category5"
+  | "Category6";
 
 export interface IUser extends Document {
   firstName: string;
@@ -88,13 +88,13 @@ const userSchema = new Schema<IUser>(
     speciality: {
       type: String,
       enum: [
-        "Hair",
-        "Nails",
-        "Makeup",
-        "Massage",
+        "Category1",
+        "Category2",
+        "Category3",
+        "Category4",
         "Reception",
-        "Waxing",
-        "Skincare",
+        "Category5",
+        "Category6",
       ],
       default: undefined,
     },

@@ -13,10 +13,10 @@ export type AppointmentStatus =
 export type AppointmentSource = "admin" | "cashier" | "online";
 
 export type EmployeeSpeciality =
-  | "Hair"
-  | "Nails"
-  | "Makeup"
-  | "Massage"
+  | "Category1"
+  | "Category2"
+  | "Category3"
+  | "Category4"
   | "Reception";
 
 export interface AppointmentClient {

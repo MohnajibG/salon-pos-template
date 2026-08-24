@@ -30,7 +30,7 @@ const generateTicketNumber = async () => {
   const number = (count + 1).toString().padStart(6, "0");
   const year = new Date().getFullYear();
 
-  return `AK-${year}-${number}`;
+  return `TCK-${year}-${number}`;
 };
 
 const buildItems = async (

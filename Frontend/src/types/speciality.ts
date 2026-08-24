@@ -1,25 +1,25 @@
 import type { Speciality } from "./employee";
 
 export const SPECIALITIES: Speciality[] = [
-  "Hair",
-  "Nails",
-  "Makeup",
-  "Massage",
+  "Category1",
+  "Category2",
+  "Category3",
+  "Category4",
   "Reception",
-  "Waxing",
-  "Skincare",
+  "Category5",
+  "Category6",
 ];
 
 // Libellés génériques : à remplacer par les postes/spécialités réels de
 // votre commerce (ex. "Vente", "Livraison", "Atelier"...). Les clés
-// internes (Hair, Nails, etc.) ne sont pas affichées et n'ont pas besoin
-// d'être renommées.
+// internes (Category1, Category2, etc.) ne sont pas affichées et n'ont
+// pas besoin d'être renommées.
 export const SPECIALITY_LABELS: Record<Speciality, string> = {
-  Hair: "Spécialité 1",
-  Nails: "Spécialité 2",
-  Makeup: "Spécialité 3",
-  Massage: "Spécialité 4",
+  Category1: "Spécialité 1",
+  Category2: "Spécialité 2",
+  Category3: "Spécialité 3",
+  Category4: "Spécialité 4",
   Reception: "Accueil",
-  Waxing: "Spécialité 5",
-  Skincare: "Spécialité 6",
+  Category5: "Spécialité 5",
+  Category6: "Spécialité 6",
 };
