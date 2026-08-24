@@ -19,7 +19,7 @@ export default function EvolutionChart({ data }: EvolutionChartProps) {
   return (
     <motion.div
       whileHover={{ scale: 1.005 }}
-      className="rounded-3xl border border-[#e5e7eb] bg-white p-6"
+      className="rounded-3xl border border-[#e2e8f0] bg-white p-6"
     >
       <div className="flex items-center justify-between">
         <h2 className="font-semibold">Évolution du chiffre d'affaires</h2>
@@ -32,7 +32,7 @@ export default function EvolutionChart({ data }: EvolutionChartProps) {
           Aucune vente sur cette période
         </p>
       ) : (
-        <div className="mt-6 flex h-56 items-end gap-2 overflow-x-auto rounded-2xl bg-[#f3f4f6] p-4">
+        <div className="mt-6 flex h-56 items-end gap-2 overflow-x-auto rounded-2xl bg-[#f1f5f9] p-4">
           {data.evolution.map((item) => (
             <div
               key={item._id}
@@ -40,7 +40,7 @@ export default function EvolutionChart({ data }: EvolutionChartProps) {
               title={`${item._id} · ${money(item.revenue)} · ${item.tickets} tickets`}
             >
               <div
-                className="w-full rounded-full bg-[#2563eb]"
+                className="w-full rounded-full bg-[#0d9488]"
                 style={{
                   height: `${
                     maxEvolutionRevenue > 0

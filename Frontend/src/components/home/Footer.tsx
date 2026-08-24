@@ -24,12 +24,12 @@ const Footer = () => (
         >
           <a href="#home" className="flex items-center gap-3">
             <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-(--champagne) font-title text-lg font-bold text-(--black)">
-              SP
+              FD
             </span>
 
             <span className="flex flex-col leading-none">
               <span className="font-title text-2xl tracking-[0.15em] text-(--champagne)">
-                SALONPRO
+                FLOWDESK
               </span>
               <span className="mt-1 text-[0.6rem] font-semibold uppercase tracking-[0.45em] text-white/50">
                 Commerce
@@ -101,7 +101,7 @@ const Footer = () => (
 
             <p className="flex items-center gap-3">
               <FaInstagram size={17} className="shrink-0 text-(--champagne)" />
-              @salonpro
+              @flowdesk
             </p>
           </div>
         </div>
@@ -110,7 +110,7 @@ const Footer = () => (
       {/* COPYRIGHT */}
       <div className="flex flex-col items-center gap-3 border-t border-white/10 pt-6 text-center sm:flex-row sm:justify-between sm:text-left">
         <p className="text-xs uppercase tracking-[0.25em] text-white/40">
-          © 2026 SalonPro — Tous droits réservés
+          © 2026 Flowdesk — Tous droits réservés
         </p>
 
         <p className="text-xs uppercase tracking-[0.25em] text-white/40">

@@ -1,29 +1,29 @@
 @import "tailwindcss";
 
 /* ================================
-   SALONPRO DESIGN SYSTEM
+   FLOWDESK DESIGN SYSTEM
    Palette neutre "basique" — à remplacer par
    l'identité visuelle de chaque commerce.
 ================================ */
 
 :root {
-  --black: #111827;
-  --dark: #1f2937;
-  --text: #1f2937;
-  --muted: #6b7280;
+  --black: #0f172a;
+  --dark: #1e293b;
+  --text: #1e293b;
+  --muted: #64748b;
 
-  --brown: #4b5563;
-  --brown-dark: #1f2937;
-  --surface: #f3f4f6;
-  --info: #2563eb;
+  --brown: #475569;
+  --brown-dark: #1e293b;
+  --surface: #f1f5f9;
+  --info: #0d9488;
   --warning: #d97706;
 
-  --cream: #f9fafb;
-  --champagne: #93c5fd;
-  --gold: #2563eb;
+  --cream: #f8fafc;
+  --champagne: #5eead4;
+  --gold: #0d9488;
 
   --white: #ffffff;
-  --border: #e5e7eb;
+  --border: #e2e8f0;
 
   --success: #16a34a;
   --danger: #dc2626;
@@ -59,7 +59,7 @@
    EN-TÊTES DE PAGE (kicker / texte muet)
 ================================ */
 
-.ak-kicker {
+.kicker {
   font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -67,7 +67,7 @@
   color: var(--brown);
 }
 
-.ak-muted {
+.subtext {
   font-size: 0.875rem;
   color: var(--muted);
 }
@@ -80,19 +80,19 @@
 ================================ */
 
 .role-cashier {
-  --role-shell-bg: #111827;
-  --role-shell-text: #f9fafb;
-  --role-shell-accent: #60a5fa;
-  --role-shell-accent-text: #111827;
-  --role-shell-border: rgba(96, 165, 250, 0.2);
+  --role-shell-bg: #0f172a;
+  --role-shell-text: #f8fafc;
+  --role-shell-accent: #2dd4bf;
+  --role-shell-accent-text: #0f172a;
+  --role-shell-border: rgba(45, 212, 191, 0.2);
 }
 
 .role-employee {
-  --role-shell-bg: #f9fafb;
-  --role-shell-text: #1f2937;
-  --role-shell-accent: #2563eb;
-  --role-shell-accent-text: #f9fafb;
-  --role-shell-border: #e5e7eb;
+  --role-shell-bg: #f8fafc;
+  --role-shell-text: #1e293b;
+  --role-shell-accent: #0d9488;
+  --role-shell-accent-text: #f8fafc;
+  --role-shell-border: #e2e8f0;
 }
 
 /* ================================

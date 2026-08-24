@@ -111,25 +111,25 @@ const Login = () => {
           <div
             className="absolute inset-0 h-full w-full"
             style={{
-              backgroundImage: "linear-gradient(135deg, #111827 0%, #1e3a8a 100%)",
+              backgroundImage: "linear-gradient(135deg, #0f172a 0%, #0f766e 100%)",
             }}
           />
 
           <div className="absolute inset-0 bg-(--black)/75" />
           <div className="absolute inset-0 bg-linear-to-t from-(--black)/90 via-(--black)/60 to-(--black)/40" />
 
-          <div className="absolute -top-20 -right-16 h-72 w-72 rounded-full bg-blue-400/20 blur-3xl" />
-          <div className="absolute -bottom-24 -left-16 h-64 w-64 rounded-full bg-blue-500/15 blur-3xl" />
+          <div className="absolute -top-20 -right-16 h-72 w-72 rounded-full bg-teal-400/20 blur-3xl" />
+          <div className="absolute -bottom-24 -left-16 h-64 w-64 rounded-full bg-teal-500/15 blur-3xl" />
 
           <div className="relative z-10">
             <a href="/" className="flex items-center gap-3">
               <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-(--champagne) font-title text-lg font-bold text-(--black)">
-                SP
+                FD
               </span>
 
               <span className="flex flex-col leading-none">
                 <span className="font-title text-xl tracking-[0.15em] text-(--champagne)">
-                  SALONPRO
+                  FLOWDESK
                 </span>
                 <span className="mt-1 text-[0.55rem] font-semibold uppercase tracking-[0.45em] text-(--white)/50">
                   Commerce
@@ -167,7 +167,7 @@ const Login = () => {
                 transition={{ duration: 0.4, delay: 0.2 + index * 0.1 }}
                 className="flex items-start gap-4 rounded-2xl border border-(--white)/10 bg-(--white)/10 p-5 backdrop-blur-sm"
               >
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-200/15 text-blue-200">
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-teal-200/15 text-teal-200">
                   <Icon size={20} />
                 </span>
 
@@ -193,11 +193,11 @@ const Login = () => {
             {/* Logo mobile (le panneau pro n'est visible qu'à partir de lg) */}
             <a href="/" className="mb-8 flex items-center gap-3 lg:hidden">
               <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-(--black) font-title text-base font-bold text-(--champagne)">
-                SP
+                FD
               </span>
               <span className="flex flex-col leading-none">
                 <span className="font-title text-lg tracking-[0.15em] text-(--black)">
-                  SALONPRO
+                  FLOWDESK
                 </span>
                 <span className="mt-1 text-[0.5rem] font-semibold uppercase tracking-[0.4em] text-(--brown)">
                   Commerce
@@ -243,7 +243,7 @@ const Login = () => {
                   autoComplete="email"
                   value={email}
                   onChange={(event) => setEmail(event.target.value)}
-                  placeholder="admin@salonpro.com"
+                  placeholder="admin@flowdesk.com"
                   className="w-full appearance-none rounded-2xl border border-(--border) bg-(--white) px-6 py-4 font-body text-base outline-none transition placeholder:text-(--muted) focus:border-(--gold) focus:ring-4 focus:ring-(--gold)/10"
                 />
               </div>
@@ -295,7 +295,7 @@ const Login = () => {
             </form>
 
             <div className="mt-10 text-center font-body text-xs uppercase tracking-[0.3em] text-(--muted)">
-              SALONPRO APP
+              FLOWDESK APP
               <br />
               Édition professionnelle
             </div>

@@ -50,13 +50,13 @@ const Services = () => {
   return (
     <div className="w-full space-y-6">
       <div className="rounded-3xl border border-(--border) bg-white px-5 py-7 shadow-(--shadow-sm) sm:px-8">
-        <p className="ak-kicker">Espace employé</p>
+        <p className="kicker">Espace employé</p>
 
         <h1 className="mt-3 font-title text-3xl font-bold">
           Mes prestations
         </h1>
 
-        <p className="ak-muted mt-2">Historique des prestations réalisées</p>
+        <p className="subtext mt-2">Historique des prestations réalisées</p>
       </div>
 
       {services.length === 0 ? (
@@ -80,7 +80,7 @@ const Services = () => {
                   <div>
                     <h2 className="text-lg font-semibold">{service.name}</h2>
 
-                    <p className="ak-muted text-sm">{service.category}</p>
+                    <p className="subtext text-sm">{service.category}</p>
                   </div>
                 </div>
 

@@ -42,11 +42,11 @@ const CashierTickets = () => {
   return (
     <div className="w-full space-y-6">
       <section className="flex flex-col gap-3 rounded-3xl border border-(--border) bg-white p-6 shadow-(--shadow-sm)">
-        <p className="ak-kicker">Caisse</p>
+        <p className="kicker">Caisse</p>
 
         <h1 className="font-title text-3xl font-bold">Historique tickets</h1>
 
-        <p className="ak-muted">Consultez les ventes réalisées.</p>
+        <p className="subtext">Consultez les ventes réalisées.</p>
       </section>
 
       {error && (

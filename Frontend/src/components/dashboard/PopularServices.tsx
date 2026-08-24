@@ -9,7 +9,7 @@ interface PopularServicesProps {
 
 export default function PopularServices({ data }: PopularServicesProps) {
   return (
-    <div className="rounded-3xl border border-[#e5e7eb] bg-white p-6">
+    <div className="rounded-3xl border border-[#e2e8f0] bg-white p-6">
       <div className="mb-5 flex items-center gap-2">
         <Sparkles size={20} />
 

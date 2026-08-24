@@ -34,7 +34,7 @@ const Testimonials = () => (
         viewport={{ once: true }}
         className="mt-5 font-title text-3xl font-bold sm:text-5xl"
       >
-        L'expérience SalonPro appréciée par nos clients
+        L'expérience Flowdesk appréciée par nos clients
       </motion.h2>
 
       <div className="mt-14 flex flex-col gap-8 md:flex-row">

@@ -21,20 +21,20 @@ export default function KpiCard({
     <motion.div
       whileHover={{ y: -5 }}
       transition={{ duration: 0.2 }}
-      className="rounded-3xl border border-[#e5e7eb] bg-white p-6"
+      className="rounded-3xl border border-[#e2e8f0] bg-white p-6"
     >
       <div className="flex items-center justify-between">
         <p className="text-sm text-gray-500">{title}</p>
 
         <Icon
           size={22}
-          className={danger ? "text-red-500" : "text-[#2563eb]"}
+          className={danger ? "text-red-500" : "text-[#0d9488]"}
         />
       </div>
 
       <h3
         className={`mt-4 text-3xl font-bold ${
-          danger ? "text-red-600" : "text-[#2563eb]"
+          danger ? "text-red-600" : "text-[#0d9488]"
         }`}
       >
         {value}

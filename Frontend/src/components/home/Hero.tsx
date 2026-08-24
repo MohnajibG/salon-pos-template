@@ -5,10 +5,10 @@ import { ArrowRight, CalendarDays, Sparkles } from "lucide-react";
 // Dégradés de secours : à remplacer par de vraies photos de votre commerce
 // (Frontend/src/components/home/Hero.tsx).
 const slides = [
-  "linear-gradient(135deg, #1f2937 0%, #374151 100%)",
-  "linear-gradient(135deg, #111827 0%, #1e3a8a 100%)",
-  "linear-gradient(135deg, #1f2937 0%, #0f172a 100%)",
-  "linear-gradient(135deg, #1e3a8a 0%, #111827 100%)",
+  "linear-gradient(135deg, #1e293b 0%, #334155 100%)",
+  "linear-gradient(135deg, #0f172a 0%, #0f766e 100%)",
+  "linear-gradient(135deg, #1e293b 0%, #0f172a 100%)",
+  "linear-gradient(135deg, #0f766e 0%, #0f172a 100%)",
 ];
 
 const trustPoints = [
@@ -68,7 +68,7 @@ const Hero = () => {
             </p>
 
             <h1 className="font-title text-6xl font-bold tracking-[0.1em] sm:text-7xl lg:text-9xl">
-              SALONPRO
+              FLOWDESK
             </h1>
 
             <p className="mt-4 text-xs uppercase tracking-[0.65em] text-(--champagne) sm:text-sm">

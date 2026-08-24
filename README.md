@@ -1,4 +1,4 @@
-# SalonPro — POS & gestion pour commerce avec rendez-vous
+# Flowdesk — POS & gestion pour commerce avec rendez-vous
 
 Template générique d'application de gestion : rendez-vous, caisse, employés,
 services, dépenses, administration. Pensé pour être adapté à n'importe quel
@@ -29,8 +29,8 @@ yarn dev
 
 ## Design "basique" par défaut
 
-Ce dépôt part volontairement d'un design minimal, neutre (bleu/gris, polices
-système, pas de photos), prêt à être personnalisé :
+Ce dépôt part volontairement d'un design minimal, neutre (sarcelle/ardoise,
+polices système, pas de photos), prêt à être personnalisé :
 
 - **Couleurs** : une seule palette neutre dans `Frontend/src/index.css` (`:root`
   + `.role-cashier` / `.role-employee`). Changer les valeurs hex suffit à
@@ -42,7 +42,7 @@ système, pas de photos), prêt à être personnalisé :
   `.../About.tsx`, `Frontend/src/pages/auth/Login.tsx`,
   `Frontend/src/components/ui/ImagePlaceholder.tsx`) — à remplacer par de
   vraies photos.
-- **Favicon** : logo générique (carré bleu) dans `Frontend/public/favicon.png`.
+- **Favicon** : logo générique (carré sarcelle) dans `Frontend/public/favicon.png`.
 
 ## Textes génériques par défaut
 
@@ -83,7 +83,7 @@ particulier :
 
 ## Personnaliser pour un nouveau commerce
 
-Le nom "SalonPro" est un nom générique de remplacement, à changer avant toute mise
+Le nom "Flowdesk" est un nom générique de remplacement, à changer avant toute mise
 en production. Points à modifier :
 
 | Quoi | Où |

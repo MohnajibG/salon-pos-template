@@ -55,9 +55,9 @@ const Customers = () => {
     <div className="w-full space-y-6">
       <section className="flex flex-col gap-5 rounded-3xl border border-(--border) bg-white p-6 shadow-(--shadow-sm) sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <p className="ak-kicker">CRM</p>
+          <p className="kicker">CRM</p>
           <h1 className="mt-3 font-title text-3xl font-bold">Clients</h1>
-          <p className="ak-muted mt-2">Gestion des clients</p>
+          <p className="subtext mt-2">Gestion des clients</p>
         </div>
 
         <button className="flex items-center justify-center gap-2 rounded-xl bg-(--black) px-5 py-3 text-(--cream) transition hover:bg-(--brown-dark)">

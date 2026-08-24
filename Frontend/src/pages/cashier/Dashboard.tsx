@@ -95,7 +95,7 @@ const CashierDashboard = () => {
     <div className="w-full space-y-6">
       <PageHeader
         kicker="Cashier"
-        title="SalonPro POS"
+        title="Flowdesk POS"
         description="Gestion des ventes et tickets du jour"
         icon={<Receipt size={24} />}
         action={<Badge variant="success">Réception active</Badge>}

@@ -12,7 +12,7 @@ export const loginAsAdmin = async (page: Page) => {
 
   await page.goto("/login");
 
-  await page.getByPlaceholder("admin@salonpro.com").fill(email);
+  await page.getByPlaceholder("admin@flowdesk.com").fill(email);
   await page.getByPlaceholder("••••••••").fill(password);
   await page.getByRole("button", { name: "Se connecter" }).click();
 

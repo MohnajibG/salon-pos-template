@@ -53,13 +53,13 @@ const MyAppointments = () => {
   return (
     <div className="flex w-full flex-col gap-6">
       <div className="rounded-3xl border border-(--border) bg-white p-6 shadow-(--shadow-sm) sm:p-8">
-        <p className="ak-kicker">Espace employé</p>
+        <p className="kicker">Espace employé</p>
 
         <h1 className="mt-3 font-title text-3xl font-bold">
           Mes rendez-vous
         </h1>
 
-        <p className="ak-muted mt-2">
+        <p className="subtext mt-2">
           Consultez votre planning et vos prestations.
         </p>
       </div>

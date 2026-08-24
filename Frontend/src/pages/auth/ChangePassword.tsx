@@ -304,7 +304,7 @@ const ChangePassword = () => {
           text-(--muted)
         "
         >
-          SALONPRO APP
+          FLOWDESK APP
           <br />
           Édition professionnelle
         </div>

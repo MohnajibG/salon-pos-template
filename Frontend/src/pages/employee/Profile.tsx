@@ -60,13 +60,13 @@ const Profile = () => {
           </div>
 
           <div>
-            <p className="ak-kicker">Profil employé</p>
+            <p className="kicker">Profil employé</p>
 
             <h1 className="mt-2 font-title text-3xl font-bold">
               {employee.firstName} {employee.lastName}
             </h1>
 
-            <p className="ak-muted mt-2">
+            <p className="subtext mt-2">
               {employee.role === "employee" ? "Employé" : "Caissier"}
 
               {" · "}
@@ -179,7 +179,7 @@ const StatCard = ({ title, value }: { title: string; value: string }) => (
     }}
     className="rounded-3xl border border-(--border) bg-white p-6 shadow-(--shadow-sm)"
   >
-    <p className="ak-muted text-sm">{title}</p>
+    <p className="subtext text-sm">{title}</p>
 
     <h2 className="mt-2 text-3xl font-bold">{value}</h2>
   </motion.div>
@@ -198,7 +198,7 @@ const Info = ({
     <div className="rounded-xl bg-(--cream) p-3 text-(--black)">{icon}</div>
 
     <div>
-      <p className="ak-muted text-xs">{label}</p>
+      <p className="subtext text-xs">{label}</p>
 
       <p className="font-semibold">{value}</p>
     </div>

@@ -44,7 +44,7 @@ app.use("/api/expenses", expenseRoutes);
 app.get("/", (_, res) => {
   res.json({
     success: true,
-    message: "SalonPro API Running",
+    message: "Flowdesk API Running",
   });
 });
 

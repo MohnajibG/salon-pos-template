@@ -55,7 +55,7 @@ const About = () => (
         className="flex w-full flex-col lg:w-1/2"
       >
         <p className="text-xs font-semibold uppercase tracking-[0.4em] text-(--brown)">
-          À propos de SalonPro
+          À propos de Flowdesk
         </p>
 
         <h2 className="mt-5 font-title text-3xl font-bold leading-tight text-(--black) sm:text-5xl">
@@ -63,7 +63,7 @@ const About = () => (
         </h2>
 
         <p className="mt-6 max-w-xl text-base leading-8 text-(--muted)">
-          SalonPro est plus qu'un commerce. C'est un espace pensé où
+          Flowdesk est plus qu'un commerce. C'est un espace pensé où
           expertise, attention personnalisée et outils modernes se
           rencontrent pour créer une expérience exceptionnelle.
         </p>

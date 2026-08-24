@@ -15,7 +15,7 @@ const details = [
   {
     icon: Camera,
     title: "Instagram",
-    text: "@salonpro",
+    text: "@flowdesk",
   },
 ];
 
@@ -41,7 +41,7 @@ const Contact = () => (
           </p>
 
           <h2 className="mt-5 font-title text-3xl font-bold text-(--black) sm:text-5xl">
-            Visitez SalonPro
+            Visitez Flowdesk
           </h2>
 
           <p className="mt-6 max-w-xl text-sm leading-7 text-(--muted) sm:text-base">

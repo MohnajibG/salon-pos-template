@@ -43,7 +43,7 @@ const WhyChooseUs = () => (
           </h2>
 
           <p className="mt-6 max-w-xl text-sm leading-7 text-(--muted) sm:text-base">
-            Chez SalonPro, chaque détail compte. Notre objectif est
+            Chez Flowdesk, chaque détail compte. Notre objectif est
             de créer une expérience unique et personnalisée pour chaque
             client.
           </p>

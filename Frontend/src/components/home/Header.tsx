@@ -38,12 +38,12 @@ const Header = () => {
         {/* LOGO */}
         <a href="#home" className="flex items-center gap-3 select-none">
           <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-(--black) font-title text-lg font-bold text-(--champagne)">
-            SP
+            FD
           </span>
 
           <span className="flex flex-col leading-none">
             <span className="font-title text-xl tracking-[0.15em] text-(--black) sm:text-2xl">
-              SALONPRO
+              FLOWDESK
             </span>
             <span className="mt-1 text-[0.6rem] font-semibold uppercase tracking-[0.45em] text-(--brown)">
               Commerce

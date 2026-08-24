@@ -16,7 +16,7 @@ export default function CategoryBreakdown({ data }: CategoryBreakdownProps) {
   }, [data.categoryBreakdown]);
 
   return (
-    <div className="rounded-3xl border border-[#e5e7eb] bg-white p-6">
+    <div className="rounded-3xl border border-[#e2e8f0] bg-white p-6">
       <div className="mb-5 flex items-center gap-2">
         <Layers size={20} />
 
@@ -35,9 +35,9 @@ export default function CategoryBreakdown({ data }: CategoryBreakdownProps) {
                 <strong>{money(item.revenue)}</strong>
               </div>
 
-              <div className="mt-2 h-2 w-full rounded-full bg-[#f3f4f6]">
+              <div className="mt-2 h-2 w-full rounded-full bg-[#f1f5f9]">
                 <div
-                  className="h-2 rounded-full bg-[#93c5fd]"
+                  className="h-2 rounded-full bg-[#5eead4]"
                   style={{
                     width: `${
                       maxCategoryRevenue > 0

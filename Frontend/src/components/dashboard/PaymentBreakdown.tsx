@@ -16,7 +16,7 @@ export default function PaymentBreakdown({ data }: PaymentBreakdownProps) {
   }, [data.paymentBreakdown]);
 
   return (
-    <div className="rounded-3xl border border-[#e5e7eb] bg-white p-6">
+    <div className="rounded-3xl border border-[#e2e8f0] bg-white p-6">
       <div className="mb-5 flex items-center gap-2">
         <CreditCard size={20} />
 
@@ -35,9 +35,9 @@ export default function PaymentBreakdown({ data }: PaymentBreakdownProps) {
                 <strong>{money(item.revenue)}</strong>
               </div>
 
-              <div className="mt-2 h-2 w-full rounded-full bg-[#f3f4f6]">
+              <div className="mt-2 h-2 w-full rounded-full bg-[#f1f5f9]">
                 <div
-                  className="h-2 rounded-full bg-[#2563eb]"
+                  className="h-2 rounded-full bg-[#0d9488]"
                   style={{
                     width: `${
                       maxPaymentRevenue > 0

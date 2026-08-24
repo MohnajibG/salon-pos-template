@@ -119,7 +119,7 @@ const Profile = () => {
       <section className="rounded-3xl border border-(--border) bg-white p-6 shadow-(--shadow-sm)">
         <h2 className="text-xl font-bold">Sécurité</h2>
 
-        <p className="ak-muted mt-2">Gestion du mot de passe du compte.</p>
+        <p className="subtext mt-2">Gestion du mot de passe du compte.</p>
 
         <button className="mt-5 rounded-xl bg-(--black) px-5 py-3 text-(--cream) transition hover:bg-(--brown-dark)">
           Modifier le mot de passe

@@ -50,7 +50,7 @@ const POS = () => {
           <p className="text-xs uppercase tracking-[0.4em] text-(--champagne)">
             Caisse
           </p>
-          <h1 className="mt-3 font-title text-3xl font-bold">SalonPro POS</h1>
+          <h1 className="mt-3 font-title text-3xl font-bold">Flowdesk POS</h1>
           <p className="mt-2 text-sm text-(--muted)">
             Création d'un nouveau ticket
           </p>

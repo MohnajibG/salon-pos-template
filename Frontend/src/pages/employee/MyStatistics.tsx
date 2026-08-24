@@ -39,13 +39,13 @@ const MyStatistics = () => {
   return (
     <div className="w-full space-y-6">
       <div className="rounded-3xl border border-(--border) bg-white px-5 py-7 shadow-(--shadow-sm) sm:px-8">
-        <p className="ak-kicker">Statistiques employé</p>
+        <p className="kicker">Statistiques employé</p>
 
         <h1 className="mt-3 font-title text-3xl font-bold">
           Performance de {employee.firstName}
         </h1>
 
-        <p className="ak-muted mt-2">{employee.speciality ?? "Employé"}</p>
+        <p className="subtext mt-2">{employee.speciality ?? "Employé"}</p>
 
         <div className="mt-4 inline-flex rounded-xl bg-(--champagne)/20 px-4 py-2 text-sm font-semibold text-(--brown-dark)">
           {currentMonth}
@@ -91,7 +91,7 @@ const MyStatistics = () => {
             ))}
           </div>
 
-          <p className="ak-muted mt-4 text-sm">
+          <p className="subtext mt-4 text-sm">
             Évolution quotidienne du mois sélectionné
           </p>
         </motion.div>
@@ -144,7 +144,7 @@ const KpiCard = ({
   >
     <div className="flex justify-between">
       <div>
-        <p className="ak-muted text-sm">{title}</p>
+        <p className="subtext text-sm">{title}</p>
 
         <h3 className="mt-2 text-2xl font-bold">{value}</h3>
       </div>

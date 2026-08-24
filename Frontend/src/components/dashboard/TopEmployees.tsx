@@ -7,7 +7,7 @@ interface TopEmployeesProps {
 
 export default function TopEmployees({ data }: TopEmployeesProps) {
   return (
-    <div className="rounded-3xl border border-[#e5e7eb] bg-white p-6">
+    <div className="rounded-3xl border border-[#e2e8f0] bg-white p-6">
       <h2 className="mb-5 font-semibold">Performance employés</h2>
 
       <div className="space-y-3">
@@ -15,7 +15,7 @@ export default function TopEmployees({ data }: TopEmployeesProps) {
           data.topEmployees.map((employee) => (
             <div
               key={employee.employeeId}
-              className="flex items-center justify-between rounded-2xl bg-[#f3f4f6] p-4"
+              className="flex items-center justify-between rounded-2xl bg-[#f1f5f9] p-4"
             >
               <span className="font-semibold">{employee.name}</span>
 

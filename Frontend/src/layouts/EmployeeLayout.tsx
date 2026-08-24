@@ -64,7 +64,7 @@ const EmployeeLayout = () => {
       <header className="fixed left-0 top-0 z-40 flex h-16 w-full items-center justify-between border-b border-(--role-shell-border) bg-(--role-shell-bg) px-5 md:hidden">
         <div>
           <h1 className="font-title text-xl tracking-widest text-(--role-shell-text)">
-            SALONPRO
+            FLOWDESK
           </h1>
           <p className="text-[10px] tracking-[0.4em] text-(--role-shell-accent)">
             COMMERCE
@@ -99,7 +99,7 @@ const EmployeeLayout = () => {
       {/* TABLET SIDEBAR */}
       <aside className="fixed left-0 top-0 hidden h-screen w-20 flex-col items-center border-r border-(--role-shell-border) bg-(--role-shell-bg) py-6 md:flex lg:hidden">
         <h1 className="mb-8 font-title text-xl text-(--role-shell-text)">
-          SP
+          FD
         </h1>
 
         <nav className="flex flex-1 flex-col gap-3 overflow-y-auto">
@@ -135,7 +135,7 @@ const EmployeeLayout = () => {
       >
         <div className="relative border-b border-(--role-shell-border) p-6">
           <h1 className="font-title text-2xl tracking-[3px]">
-            {collapsed ? "SP" : "SALONPRO"}
+            {collapsed ? "FD" : "FLOWDESK"}
           </h1>
 
           {!collapsed && (

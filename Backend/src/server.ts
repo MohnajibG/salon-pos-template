@@ -28,7 +28,7 @@ const startServer = async () => {
     app.listen(env.PORT, "0.0.0.0", async () => {
       console.log(`
 ====================================
-🚀 SalonPro API
+🚀 Flowdesk API
 ====================================
 Server : http://0.0.0.0:${env.PORT}
 Status : Running
