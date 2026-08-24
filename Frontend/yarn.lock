@@ -2346,9 +2346,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"salon-pos-frontend@workspace:.":
+"pos-frontend@workspace:.":
   version: 0.0.0-use.local
-  resolution: "salon-pos-frontend@workspace:."
+  resolution: "pos-frontend@workspace:."
   dependencies:
     "@eslint/js": ^10.0.1
     "@hookform/resolvers": ^5.4.0

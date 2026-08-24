@@ -1,10 +1,10 @@
 # SalonPro — POS & gestion pour commerce avec rendez-vous
 
-Base générique dérivée du projet **ANFAL K** (à l'origine un institut de beauté) :
-même code, mêmes fonctionnalités (rendez-vous, caisse, employés, services,
-dépenses, admin), entièrement dérebrandée pour être adaptée à n'importe quel
-commerce fonctionnant par rendez-vous/prestations (salon, atelier, cabinet,
-studio, etc.) — pas seulement un salon de beauté.
+Template générique d'application de gestion : rendez-vous, caisse, employés,
+services, dépenses, administration. Pensé pour être adapté à n'importe quel
+commerce fonctionnant par rendez-vous/prestations (atelier, cabinet, studio,
+boutique de services, etc.), sans dépendre d'un secteur d'activité en
+particulier.
 
 ## Stack
 
@@ -46,8 +46,8 @@ système, pas de photos), prêt à être personnalisé :
 
 ## Textes génériques par défaut
 
-Tout le texte visible a été dérebrandé pour ne plus être spécifique à un
-institut de beauté :
+Tout le texte visible est générique, sans référence à un secteur d'activité
+particulier :
 
 - La page publique (`Frontend/src/components/home/*`) utilise un texte de
   présentation neutre ("Service 1/2/3", "Nos réalisations"...) à remplacer
@@ -77,10 +77,9 @@ institut de beauté :
   `"DZD"` reste la valeur par défaut).
 - Préfixe des numéros de ticket générique (`TCK-2026-000123` au lieu de
   `AK-2026-000123`) dans `Backend/src/services/ticket.service.ts`.
-- Les deux scripts de seed 100% catalogue beauté (`Backend/src/scripts/seedSalonCatalog.ts`
-  et `Backend/scripts/seedServices.ts`, ni l'un ni l'autre appelés par
-  l'app) ont été supprimés : c'était un import ponctuel du catalogue
-  d'ANFAL K, sans valeur de départ pour un autre commerce.
+- Les deux anciens scripts de seed de données de démo (ni l'un ni l'autre
+  appelés par l'app) ont été supprimés : catalogue figé lié à une activité
+  précise, sans valeur de départ pour un autre commerce.
 
 ## Personnaliser pour un nouveau commerce
 
@@ -101,9 +100,3 @@ en production. Points à modifier :
 | Message API / logs serveur | `Backend/src/app.ts`, `Backend/src/server.ts` |
 | Compte admin de démo (tests e2e) | `Frontend/.env.e2e.example`, `Frontend/tests/e2e/helpers/auth.ts` |
 
-## Origine
-
-Basé sur le projet [ANFAL K](https://github.com/MohnajibG/ANFALK), une application
-de gestion pour un institut de beauté précis. Cette copie retire le branding
-et le texte spécifiques pour pouvoir être réutilisée pour un autre type de
-commerce.
