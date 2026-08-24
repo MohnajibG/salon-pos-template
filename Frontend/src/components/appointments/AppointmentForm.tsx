@@ -182,7 +182,7 @@ const AppointmentForm = ({
       setError("");
 
       if (!client) {
-        throw new Error("Veuillez sélectionner une cliente");
+        throw new Error("Veuillez sélectionner un client");
       }
 
       if (!user?._id) {

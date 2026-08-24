@@ -3,7 +3,7 @@ import {
   User,
   Phone,
   Mail,
-  Scissors,
+  Sparkles,
   CalendarDays,
   CheckCircle,
 } from "lucide-react";
@@ -146,7 +146,7 @@ const Profile = () => {
 
           <div className="space-y-4 text-sm">
             <Info
-              icon={<Scissors size={18} />}
+              icon={<Sparkles size={18} />}
               label="Spécialité"
               value={employee.speciality ?? "-"}
             />

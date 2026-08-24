@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { Check, ChevronDown, Scissors } from "lucide-react";
+import { Check, ChevronDown, Sparkles } from "lucide-react";
 
 import type { Service } from "../../types/service";
 import type { Employee } from "../../types/employee";
@@ -147,7 +147,7 @@ const AppointmentServicesSelector = ({
         gap-2
         "
       >
-        <Scissors size={18} className="text-(--champagne)" />
+        <Sparkles size={18} className="text-(--champagne)" />
 
         <label
           className="

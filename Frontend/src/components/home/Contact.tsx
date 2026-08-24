@@ -5,12 +5,12 @@ const details = [
   {
     icon: MapPin,
     title: "Adresse",
-    text: "Boumerdes, Algérie",
+    text: "Votre adresse, votre ville",
   },
   {
     icon: Phone,
     title: "Téléphone",
-    text: "+213 24 00 00 00 00",
+    text: "+00 0 00 00 00 00",
   },
   {
     icon: Camera,
@@ -45,8 +45,8 @@ const Contact = () => (
           </h2>
 
           <p className="mt-6 max-w-xl text-sm leading-7 text-(--muted) sm:text-base">
-            Découvrez une expérience beauté raffinée dans un environnement
-            élégant pensé pour votre confort et votre confiance.
+            Découvrez une expérience soignée, dans un environnement pensé
+            pour votre confort et votre confiance.
           </p>
 
           {/* INFORMATIONS */}
@@ -85,7 +85,7 @@ const Contact = () => (
             whileHover={{ scale: 1.05 }}
             className="group mt-12 flex items-center gap-3 rounded-full bg-(--black) px-10 py-4 text-sm font-semibold text-(--cream) transition hover:bg-(--brown-dark)"
           >
-            Réserver une prestation
+            Prendre rendez-vous
             <ArrowRight
               size={18}
               className="transition group-hover:translate-x-1"

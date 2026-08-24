@@ -109,7 +109,7 @@ const Waitlist = () => {
       setSaving(true);
       setError("");
 
-      if (!client) throw new Error("Veuillez sélectionner une cliente");
+      if (!client) throw new Error("Veuillez sélectionner un client");
       if (!selectedServices.length)
         throw new Error("Veuillez sélectionner au moins une prestation");
       if (!desiredDateFrom)
@@ -174,7 +174,7 @@ const Waitlist = () => {
           </h1>
 
           <p className="mt-1 text-sm text-stone-500">
-            Clientes en attente d'un créneau libre
+            Clients en attente d'un créneau libre
           </p>
         </div>
 

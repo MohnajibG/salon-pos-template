@@ -4,8 +4,8 @@ import { Mail, Phone, User } from "lucide-react";
 import type {
   EmployeeForm as EmployeeFormType,
   EmployeeRole,
-  Speciality,
 } from "../../types/employee";
+import { SPECIALITIES, SPECIALITY_LABELS } from "../../types/speciality";
 
 interface EmployeeFormProps {
   initialValues?: EmployeeFormType;
@@ -29,39 +29,10 @@ const roles: {
   },
 ];
 
-const specialities: {
-  value: Speciality;
-  label: string;
-}[] = [
-  {
-    value: "Hair",
-    label: "Coiffure",
-  },
-  {
-    value: "Nails",
-    label: "Onglerie",
-  },
-  {
-    value: "Makeup",
-    label: "Maquillage",
-  },
-  {
-    value: "Massage",
-    label: "Massage",
-  },
-  {
-    value: "Reception",
-    label: "Accueil",
-  },
-  {
-    value: "Waxing",
-    label: "Épilation",
-  },
-  {
-    value: "Skincare",
-    label: "Soin du visage",
-  },
-];
+const specialities = SPECIALITIES.map((value) => ({
+  value,
+  label: SPECIALITY_LABELS[value],
+}));
 
 const defaultValues: EmployeeFormType = {
   firstName: "",

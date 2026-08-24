@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { CalendarDays, Clock, User, Scissors } from "lucide-react";
+import { CalendarDays, Clock, User, Sparkles } from "lucide-react";
 import { useEffect, useState } from "react";
 
 import { getMyEmployeeProfile } from "../../api/employee.api";
@@ -124,7 +124,7 @@ const MyAppointments = () => {
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <Scissors size={20} className="text-(--champagne)" />
+                  <Sparkles size={20} className="text-(--champagne)" />
 
                   <div>
                     <p className="font-semibold">{appointment.service}</p>

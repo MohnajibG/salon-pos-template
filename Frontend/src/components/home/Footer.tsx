@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const navLinks = [
   { label: "À propos", href: "#about" },
-  { label: "Prestations", href: "#services" },
+  { label: "Services", href: "#services" },
   { label: "Galerie", href: "#gallery" },
   { label: "Contact", href: "#contact" },
 ];
@@ -24,7 +24,7 @@ const Footer = () => (
         >
           <a href="#home" className="flex items-center gap-3">
             <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-(--champagne) font-title text-lg font-bold text-(--black)">
-              AK
+              SP
             </span>
 
             <span className="flex flex-col leading-none">
@@ -32,14 +32,14 @@ const Footer = () => (
                 SALONPRO
               </span>
               <span className="mt-1 text-[0.6rem] font-semibold uppercase tracking-[0.45em] text-white/50">
-                Institute
+                Commerce
               </span>
             </span>
           </a>
 
           <p className="max-w-xs text-sm leading-7 text-white/60">
-            Un espace dédié à la beauté, au bien-être et à l'élégance, où
-            chaque prestation est pensée pour révéler votre personnalité.
+            Un espace dédié à la qualité et au service, où chaque prestation
+            est pensée pour vous satisfaire.
           </p>
 
           <div className="flex items-center gap-3">
@@ -88,15 +88,15 @@ const Footer = () => (
           <div className="flex flex-col gap-4 text-sm text-white/70">
             <p className="flex items-center gap-3">
               <MapPin size={17} className="shrink-0 text-(--champagne)" />
-              Boumerdes, Algérie
+              Votre adresse, votre ville
             </p>
 
             <a
-              href="tel:+21324000000"
+              href="tel:+000000000"
               className="flex items-center gap-3 transition hover:text-(--champagne)"
             >
               <Phone size={17} className="shrink-0 text-(--champagne)" />
-              +213 24 00 00 00 00
+              +00 0 00 00 00 00
             </a>
 
             <p className="flex items-center gap-3">
@@ -114,7 +114,7 @@ const Footer = () => (
         </p>
 
         <p className="text-xs uppercase tracking-[0.25em] text-white/40">
-          Conçu avec soin en Algérie
+          Conçu avec soin
         </p>
       </div>
     </div>

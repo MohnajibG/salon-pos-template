@@ -1,4 +1,4 @@
-import { Clock, HandCoins, Layers, Scissors, Sparkles, X } from "lucide-react";
+import { Clock, HandCoins, Layers, Tag, Sparkles, X } from "lucide-react";
 
 import type { Service } from "../../types/service";
 import { SPECIALITY_LABELS } from "../../types/speciality";
@@ -51,7 +51,7 @@ const ViewServiceModal = ({ service, onClose }: Props) => {
 
         <div className="space-y-5">
           <InfoItem
-            icon={<Scissors size={20} />}
+            icon={<Tag size={20} />}
             label="Nom"
             value={service.name}
           />

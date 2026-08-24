@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Scissors, CalendarDays, User, HandCoins } from "lucide-react";
+import { Sparkles, CalendarDays, User, HandCoins } from "lucide-react";
 import { useEffect, useState } from "react";
 
 import { getMyEmployeeProfile } from "../../api/employee.api";
@@ -74,7 +74,7 @@ const Services = () => {
               <div className="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
                 <div className="flex items-center gap-4">
                   <div className="rounded-2xl bg-(--cream) p-4">
-                    <Scissors size={25} className="text-(--black)" />
+                    <Sparkles size={25} className="text-(--black)" />
                   </div>
 
                   <div>

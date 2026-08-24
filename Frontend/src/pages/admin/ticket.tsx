@@ -107,7 +107,7 @@ const Tickets = () => {
       <PageHeader
         kicker="Administration"
         title="Gestion des tickets"
-        description="Suivez les ventes et paiements de l'institut."
+        description="Suivez les ventes et paiements de votre commerce."
         icon={<Receipt size={24} />}
       />
 

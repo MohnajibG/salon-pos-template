@@ -7,7 +7,7 @@ interface ImagePlaceholderProps {
 
 /**
  * Bloc générique remplaçant une photo réelle : à utiliser en attendant
- * que chaque salon ajoute ses propres images (locaux, équipe, réalisations).
+ * que chaque commerce ajoute ses propres images (locaux, équipe, réalisations).
  */
 const ImagePlaceholder = ({
   className = "",

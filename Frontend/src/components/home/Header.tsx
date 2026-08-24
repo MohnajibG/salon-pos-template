@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 const links = [
   { name: "Accueil", href: "#home" },
   { name: "À propos", href: "#about" },
-  { name: "Prestations", href: "#services" },
+  { name: "Services", href: "#services" },
   { name: "Galerie", href: "#gallery" },
   { name: "Contact", href: "#contact" },
 ];
@@ -38,7 +38,7 @@ const Header = () => {
         {/* LOGO */}
         <a href="#home" className="flex items-center gap-3 select-none">
           <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-(--black) font-title text-lg font-bold text-(--champagne)">
-            AK
+            SP
           </span>
 
           <span className="flex flex-col leading-none">
@@ -46,7 +46,7 @@ const Header = () => {
               SALONPRO
             </span>
             <span className="mt-1 text-[0.6rem] font-semibold uppercase tracking-[0.45em] text-(--brown)">
-              Institute
+              Commerce
             </span>
           </span>
         </a>

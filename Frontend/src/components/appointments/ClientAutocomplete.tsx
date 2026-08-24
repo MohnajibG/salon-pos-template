@@ -32,7 +32,7 @@ const ClientAutocomplete = ({ value, onChange }: Props) => {
       setClients(data.clients);
     } catch (err) {
       console.error("[ClientAutocomplete]", err);
-      setError("Impossible de charger les clientes.");
+      setError("Impossible de charger les clients.");
     } finally {
       setLoading(false);
     }
@@ -70,7 +70,7 @@ const ClientAutocomplete = ({ value, onChange }: Props) => {
 
   return (
     <div className="relative flex flex-col gap-2">
-      <label className="text-sm font-semibold text-(--black)">Cliente</label>
+      <label className="text-sm font-semibold text-(--black)">Client</label>
 
       <div className="relative">
         <Search
@@ -87,7 +87,7 @@ const ClientAutocomplete = ({ value, onChange }: Props) => {
             if (value) onChange(null);
           }}
           onFocus={() => setOpen(true)}
-          placeholder="Rechercher une cliente..."
+          placeholder="Rechercher un client..."
           className="h-12 w-full rounded-2xl border border-(--border) bg-white pl-11 pr-12 outline-none focus:border-(--black)"
         />
 
@@ -142,7 +142,7 @@ const ClientAutocomplete = ({ value, onChange }: Props) => {
             search.length >= 2 &&
             filteredClients.length === 0 && (
               <p className="p-5 text-sm text-stone-500">
-                Aucune cliente trouvée.
+                Aucun client trouvé.
               </p>
             )}
         </div>

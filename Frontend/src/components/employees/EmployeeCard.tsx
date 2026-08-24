@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Eye, Pencil, Power, Trash2, Scissors, Phone, Clock } from "lucide-react";
+import { Eye, Pencil, Power, Trash2, Sparkles, Phone, Clock } from "lucide-react";
 
 import type { Employee } from "../../types/employee";
 import Badge from "../ui/Badge";
@@ -42,7 +42,7 @@ const EmployeeCard = ({
       </div>
 
       <div className="flex items-center gap-2 text-sm">
-        <Scissors size={17} className="text-(--brown)" />
+        <Sparkles size={17} className="text-(--brown)" />
         <span>{employee.speciality || "Non définie"}</span>
       </div>
 

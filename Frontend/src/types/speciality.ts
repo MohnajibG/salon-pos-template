@@ -10,12 +10,16 @@ export const SPECIALITIES: Speciality[] = [
   "Skincare",
 ];
 
+// Libellés génériques : à remplacer par les postes/spécialités réels de
+// votre commerce (ex. "Vente", "Livraison", "Atelier"...). Les clés
+// internes (Hair, Nails, etc.) ne sont pas affichées et n'ont pas besoin
+// d'être renommées.
 export const SPECIALITY_LABELS: Record<Speciality, string> = {
-  Hair: "Coiffure",
-  Nails: "Onglerie",
-  Makeup: "Maquillage",
-  Massage: "Massage",
+  Hair: "Spécialité 1",
+  Nails: "Spécialité 2",
+  Makeup: "Spécialité 3",
+  Massage: "Spécialité 4",
   Reception: "Accueil",
-  Waxing: "Épilation",
-  Skincare: "Soin du visage",
+  Waxing: "Spécialité 5",
+  Skincare: "Spécialité 6",
 };

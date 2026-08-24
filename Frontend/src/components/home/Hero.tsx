@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight, CalendarDays, Sparkles } from "lucide-react";
 
-// Dégradés de secours : à remplacer par de vraies photos du salon
+// Dégradés de secours : à remplacer par de vraies photos de votre commerce
 // (Frontend/src/components/home/Hero.tsx).
 const slides = [
   "linear-gradient(135deg, #1f2937 0%, #374151 100%)",
@@ -12,8 +12,8 @@ const slides = [
 ];
 
 const trustPoints = [
-  { value: "1500+", label: "Clientes satisfaites" },
-  { value: "10+", label: "Experts beauté" },
+  { value: "1500+", label: "Clients satisfaits" },
+  { value: "10+", label: "Membres de l'équipe" },
   { value: "5★", label: "Note moyenne" },
 ];
 
@@ -64,7 +64,7 @@ const Hero = () => {
           >
             <p className="mb-6 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.35em] text-(--champagne) sm:text-sm">
               <Sparkles size={17} />
-              Institut de beauté premium
+              Excellence & savoir-faire
             </p>
 
             <h1 className="font-title text-6xl font-bold tracking-[0.1em] sm:text-7xl lg:text-9xl">
@@ -72,7 +72,7 @@ const Hero = () => {
             </h1>
 
             <p className="mt-4 text-xs uppercase tracking-[0.65em] text-(--champagne) sm:text-sm">
-              Institute
+              Commerce
             </p>
           </motion.div>
 
@@ -83,13 +83,12 @@ const Hero = () => {
             className="mt-10 max-w-2xl rounded-3xl border border-(--white)/15 bg-(--black)/25 p-6 backdrop-blur-md sm:p-10"
           >
             <h2 className="font-title text-3xl leading-tight sm:text-5xl">
-              Révélez votre beauté naturelle
+              Une expérience pensée pour vous
             </h2>
 
             <p className="mt-6 max-w-xl text-sm leading-7 text-(--white)/75 sm:text-base">
-              Une expérience beauté haut de gamme dédiée à la coiffure, au
-              maquillage, aux soins et au bien-être dans un environnement
-              élégant et personnalisé.
+              Une expérience client haut de gamme, portée par une équipe
+              passionnée, dans un environnement soigné et personnalisé.
             </p>
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
@@ -97,7 +96,7 @@ const Hero = () => {
                 href="#services"
                 className="flex items-center justify-center gap-3 rounded-full bg-(--champagne) px-8 py-4 text-sm font-semibold text-(--black) transition hover:bg-(--gold)"
               >
-                Découvrir nos prestations
+                Découvrir nos services
                 <ArrowRight size={18} />
               </a>
 

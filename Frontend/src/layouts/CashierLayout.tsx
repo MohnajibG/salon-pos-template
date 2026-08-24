@@ -51,7 +51,7 @@ const CashierLayout = () => {
             SALONPRO
           </h1>
           <p className="text-[10px] tracking-[0.4em] text-(--role-shell-accent)">
-            INSTITUTE
+            COMMERCE
           </p>
           <p className="text-xs text-(--role-shell-text)/60">
             {user.firstName || "Caissier"}
@@ -155,7 +155,7 @@ const CashierLayout = () => {
 
       {/* TABLET SIDEBAR */}
       <aside className="fixed left-0 top-0 hidden h-screen w-20 flex-col items-center border-r border-(--role-shell-border) bg-(--role-shell-bg) py-6 md:flex lg:hidden">
-        <h1 className="mb-8 font-title text-xl text-(--role-shell-text)">AK</h1>
+        <h1 className="mb-8 font-title text-xl text-(--role-shell-text)">SP</h1>
 
         <nav className="flex flex-1 flex-col gap-3 overflow-y-auto">
           {links.map(({ path, icon: Icon, label }) => (
@@ -190,7 +190,7 @@ const CashierLayout = () => {
           {!collapsed && (
             <>
               <p className="mt-2 text-[11px] tracking-[0.45em] text-(--role-shell-accent)">
-                INSTITUTE
+                COMMERCE
               </p>
               <p className="mt-4 text-xs uppercase tracking-[0.3em] text-(--role-shell-text)/60">
                 CAISSIER

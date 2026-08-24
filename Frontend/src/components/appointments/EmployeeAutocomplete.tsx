@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { Search, UserRound, X, Scissors } from "lucide-react";
+import { Search, UserRound, X, Sparkles } from "lucide-react";
 
 import { getEmployees } from "../../api/employee.api";
 
@@ -136,7 +136,7 @@ const EmployeeAutocomplete = ({ value, onChange }: Props) => {
 
                   {employee.speciality && (
                     <p className="mt-1 flex items-center gap-1 text-xs text-stone-500">
-                      <Scissors size={13} />
+                      <Sparkles size={13} />
                       {employee.speciality}
                     </p>
                   )}

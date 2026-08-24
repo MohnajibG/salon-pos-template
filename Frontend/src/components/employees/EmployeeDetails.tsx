@@ -5,7 +5,7 @@ import {
   ArrowLeft,
   Phone,
   Mail,
-  Scissors,
+  Sparkles,
   CalendarDays,
   Wallet,
   TrendingUp,
@@ -152,7 +152,7 @@ const EmployeeDetails = () => {
 
             <div className="w-full sm:w-[calc(50%-12px)]">
               <Info
-                icon={<Scissors size={18} />}
+                icon={<Sparkles size={18} />}
                 label="Spécialité"
                 value={employee.speciality || "Non définie"}
               />
@@ -223,9 +223,9 @@ const EmployeeDetails = () => {
           <div className="space-y-4">
             <Stat icon={<Award />} title="Meilleure employée" value="0 fois" />
 
-            <Stat icon={<Star />} title="Note clientes" value="N/A" />
+            <Stat icon={<Star />} title="Note clients" value="N/A" />
 
-            <Stat icon={<Scissors />} title="Service préféré" value="N/A" />
+            <Stat icon={<Sparkles />} title="Service préféré" value="N/A" />
           </div>
         </div>
       </section>

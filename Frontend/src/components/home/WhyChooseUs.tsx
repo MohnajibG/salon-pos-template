@@ -5,22 +5,22 @@ const reasons = [
   {
     icon: Award,
     title: "Expertise professionnelle",
-    text: "Une équipe passionnée et expérimentée dédiée à sublimer votre beauté avec précision.",
+    text: "Une équipe passionnée et expérimentée, engagée pour un résultat impeccable.",
   },
   {
     icon: Sparkles,
-    title: "Produits premium",
-    text: "Nous sélectionnons des produits de qualité pour garantir des résultats élégants et durables.",
+    title: "Produits & prestations de qualité",
+    text: "Nous sélectionnons ce qui se fait de mieux pour garantir des résultats fiables et durables.",
   },
   {
     icon: ShieldCheck,
-    title: "Hygiène & sécurité",
-    text: "Un environnement propre et rigoureux pour une expérience beauté en toute confiance.",
+    title: "Rigueur & sécurité",
+    text: "Un environnement propre et rigoureux pour une expérience sereine et en toute confiance.",
   },
   {
     icon: HeartHandshake,
     title: "Service personnalisé",
-    text: "Chaque prestation est adaptée à vos envies, votre style et vos besoins.",
+    text: "Chaque prestation est adaptée à vos attentes, vos envies et vos besoins.",
   },
 ];
 
@@ -39,13 +39,13 @@ const WhyChooseUs = () => (
           </p>
 
           <h2 className="mt-5 font-title text-3xl font-bold leading-tight text-(--black) sm:text-5xl">
-            Une expérience beauté pensée dans les moindres détails
+            Une expérience pensée dans les moindres détails
           </h2>
 
           <p className="mt-6 max-w-xl text-sm leading-7 text-(--muted) sm:text-base">
             Chez SalonPro, chaque détail compte. Notre objectif est
-            de créer une expérience unique, élégante et personnalisée pour
-            chaque cliente.
+            de créer une expérience unique et personnalisée pour chaque
+            client.
           </p>
 
           <div className="mt-8 h-px w-24 bg-(--champagne)" />

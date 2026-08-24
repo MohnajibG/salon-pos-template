@@ -12,7 +12,7 @@ import {
   LogOut,
   MoreHorizontal,
   Receipt,
-  Scissors,
+  Sparkles,
   Settings,
   UserCog,
   Users,
@@ -25,7 +25,7 @@ const links = [
   { label: "Clients", icon: Users, path: "/admin/clients" },
   { label: "Employés", icon: UserCog, path: "/admin/employees" },
   { label: "Catégories", icon: Layers, path: "/admin/categories" },
-  { label: "Services", icon: Scissors, path: "/admin/services" },
+  { label: "Services", icon: Sparkles, path: "/admin/services" },
   { label: "Rendez-vous", icon: CalendarDays, path: "/admin/appointments" },
   { label: "Liste d'attente", icon: ListTodo, path: "/admin/waitlist" },
   { label: "Tickets", icon: Receipt, path: "/admin/tickets" },
@@ -60,7 +60,7 @@ const AdminLayout = () => {
             SALONPRO
           </h1>
           <p className="text-[10px] tracking-[0.4em] text-(--champagne)">
-            INSTITUTE
+            COMMERCE
           </p>
         </div>
 
@@ -163,7 +163,7 @@ const AdminLayout = () => {
 
       {/* TABLET SIDEBAR */}
       <aside className="fixed left-0 top-0 hidden h-screen w-20 flex-col items-center border-r border-(--border) bg-white py-6 md:flex lg:hidden">
-        <h1 className="mb-8 font-title text-xl">AK</h1>
+        <h1 className="mb-8 font-title text-xl">SP</h1>
         <nav className="flex flex-1 flex-col gap-3 overflow-y-auto">
           {links.map(({ path, icon: Icon, label }) => (
             <button
@@ -202,7 +202,7 @@ const AdminLayout = () => {
           {!collapsed && (
             <>
               <p className="mt-2 text-[11px] tracking-[0.45em] text-(--champagne)">
-                INSTITUTE
+                COMMERCE
               </p>
 
               <div className="mt-5 flex items-center gap-3 rounded-2xl bg-(--cream) p-3">

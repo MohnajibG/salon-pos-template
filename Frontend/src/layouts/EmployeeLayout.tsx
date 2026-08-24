@@ -67,7 +67,7 @@ const EmployeeLayout = () => {
             SALONPRO
           </h1>
           <p className="text-[10px] tracking-[0.4em] text-(--role-shell-accent)">
-            INSTITUTE
+            COMMERCE
           </p>
         </div>
 
@@ -99,7 +99,7 @@ const EmployeeLayout = () => {
       {/* TABLET SIDEBAR */}
       <aside className="fixed left-0 top-0 hidden h-screen w-20 flex-col items-center border-r border-(--role-shell-border) bg-(--role-shell-bg) py-6 md:flex lg:hidden">
         <h1 className="mb-8 font-title text-xl text-(--role-shell-text)">
-          AK
+          SP
         </h1>
 
         <nav className="flex flex-1 flex-col gap-3 overflow-y-auto">
@@ -141,7 +141,7 @@ const EmployeeLayout = () => {
           {!collapsed && (
             <>
               <p className="text-xs tracking-[4px] text-(--role-shell-text)/60">
-                INSTITUTE
+                COMMERCE
               </p>
 
               <p className="mt-4 text-xs font-semibold uppercase tracking-[2px] text-(--role-shell-accent)">

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { HandCoins, Scissors, Users, TrendingUp } from "lucide-react";
+import { HandCoins, Sparkles, Users, TrendingUp } from "lucide-react";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 
@@ -58,7 +58,7 @@ const MyStatistics = () => {
         </div>
 
         <div className="w-full sm:w-[calc(50%-8px)] xl:w-[calc(25%-12px)]">
-          <KpiCard title="Prestations réalisées" value="0" icon={Scissors} />
+          <KpiCard title="Prestations réalisées" value="0" icon={Sparkles} />
         </div>
 
         <div className="w-full sm:w-[calc(50%-8px)] xl:w-[calc(25%-12px)]">

@@ -1,21 +1,21 @@
 import { motion } from "framer-motion";
-import { Scissors, Sparkles, Brush } from "lucide-react";
+import { Star, Sparkles, ShieldCheck } from "lucide-react";
 
 const services = [
   {
-    icon: Scissors,
-    title: "Hair Studio",
-    desc: "Coiffure, brushing, coloration et créations personnalisées pour révéler votre style.",
+    icon: Star,
+    title: "Service 1",
+    desc: "Décrivez ici votre premier service ou produit phare : ce qui vous distingue.",
   },
   {
     icon: Sparkles,
-    title: "Nail Bar",
-    desc: "Manucure élégante, soins premium et créations raffinées adaptées à votre personnalité.",
+    title: "Service 2",
+    desc: "Décrivez ici votre deuxième offre et ce qu'elle apporte à vos clients.",
   },
   {
-    icon: Brush,
-    title: "Makeup",
-    desc: "Maquillage naturel, soirée et mariage avec des finitions professionnelles.",
+    icon: ShieldCheck,
+    title: "Service 3",
+    desc: "Décrivez ici votre troisième offre ou catégorie de prestations.",
   },
 ];
 
@@ -31,7 +31,7 @@ const Services = () => (
         viewport={{ once: true }}
         className="text-xs font-semibold uppercase tracking-[0.4em] text-(--brown)"
       >
-        Nos prestations
+        Nos services
       </motion.p>
 
       <motion.h2
@@ -40,7 +40,7 @@ const Services = () => (
         viewport={{ once: true }}
         className="mt-5 font-title text-3xl font-bold text-(--black) sm:text-5xl"
       >
-        Des soins pensés pour révéler votre beauté
+        Des services pensés pour répondre à vos besoins
       </motion.h2>
 
       <motion.p
@@ -49,8 +49,8 @@ const Services = () => (
         viewport={{ once: true }}
         className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-(--muted) sm:text-base"
       >
-        Une expérience beauté premium combinant expertise, élégance et
-        attention personnalisée.
+        Une expérience premium combinant expertise, qualité et attention
+        personnalisée.
       </motion.p>
 
       <div className="mt-14 flex flex-wrap gap-8">

@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { Clock, HandCoins, Scissors } from "lucide-react";
+import { Clock, HandCoins, Sparkles } from "lucide-react";
 
 import type { AppointmentService } from "../../types/appointment";
 
@@ -86,7 +86,7 @@ const AppointmentSummary = ({
             gap-2
             "
           >
-            <Scissors size={18} className="text-(--champagne)" />
+            <Sparkles size={18} className="text-(--champagne)" />
 
             <h3
               className="

@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { Clock, HandCoins, Layers, Plus, Scissors, Search } from "lucide-react";
+import { Clock, HandCoins, Layers, Plus, Sparkles, Search } from "lucide-react";
 
 import {
   deleteService,
@@ -143,7 +143,7 @@ const Services = () => {
           </h1>
 
           <p className="mt-2 text-sm text-(--muted)">
-            Gérez les prestations de l'institut.
+            Gérez les prestations de votre commerce.
           </p>
         </div>
 
@@ -158,7 +158,7 @@ const Services = () => {
 
       <div className="flex flex-wrap gap-4">
         <div className="w-full *:h-full sm:w-[calc(50%-8px)] xl:w-[calc(25%-12px)]">
-          <StatCard icon={Scissors} title="Services" value={services.length} />
+          <StatCard icon={Sparkles} title="Services" value={services.length} />
         </div>
         <div className="w-full *:h-full sm:w-[calc(50%-8px)] xl:w-[calc(25%-12px)]">
           <StatCard

@@ -2,12 +2,12 @@ import { motion } from "framer-motion";
 import ImagePlaceholder from "../ui/ImagePlaceholder";
 
 const galleryImages = [
-  { title: "Espace beauté" },
-  { title: "Coiffure & soins" },
-  { title: "Mise en beauté" },
-  { title: "Moment détente" },
-  { title: "Expertise beauté" },
-  { title: "Soin personnalisé" },
+  { title: "Notre espace" },
+  { title: "Notre équipe" },
+  { title: "Nos réalisations" },
+  { title: "Ambiance" },
+  { title: "Savoir-faire" },
+  { title: "Service personnalisé" },
 ];
 
 const Gallery = () => (
@@ -28,12 +28,12 @@ const Gallery = () => (
         </p>
 
         <h2 className="mt-5 max-w-3xl font-title text-3xl font-bold sm:text-5xl">
-          Découvrez notre univers beauté
+          Découvrez notre univers
         </h2>
 
         <p className="mt-6 max-w-2xl text-sm leading-7 text-(--white)/60 sm:text-base">
-          Un aperçu de notre institut, de nos espaces et de nos créations
-          réalisées avec passion par notre équipe.
+          Un aperçu de notre commerce, de nos espaces et de nos réalisations,
+          portés avec passion par notre équipe.
         </p>
       </motion.div>
 

@@ -24,7 +24,7 @@ const Customers = () => {
         setClients(Array.isArray(data) ? data : (data.clients ?? []));
       } catch (error) {
         console.error("[Customers]", error);
-        setError("Impossible de charger les clientes.");
+        setError("Impossible de charger les clients.");
       } finally {
         setLoading(false);
       }
@@ -46,7 +46,7 @@ const Customers = () => {
   if (loading)
     return (
       <div className="flex min-h-100 items-center justify-center text-(--muted)">
-        Chargement des clientes...
+        Chargement des clients...
       </div>
     );
 
@@ -56,12 +56,12 @@ const Customers = () => {
         <div>
           <p className="ak-kicker">CRM</p>
           <h1 className="mt-3 font-title text-3xl font-bold">Clients</h1>
-          <p className="ak-muted mt-2">Gestion des clientes du salon</p>
+          <p className="ak-muted mt-2">Gestion des clients</p>
         </div>
 
         <button className="flex items-center justify-center gap-2 rounded-xl bg-(--black) px-5 py-3 text-(--cream) transition hover:bg-(--brown-dark)">
           <UserPlus size={18} />
-          Nouvelle cliente
+          Nouveau client
         </button>
       </section>
 
@@ -75,7 +75,7 @@ const Customers = () => {
           <input
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            placeholder="Rechercher une cliente..."
+            placeholder="Rechercher un client..."
             className="w-full bg-transparent outline-none"
           />
         </div>

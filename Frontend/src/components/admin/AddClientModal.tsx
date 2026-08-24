@@ -60,7 +60,7 @@ const AddClientModal = ({ open, onClose, onSuccess }: Props) => {
         notes: "",
       });
     } catch (err: any) {
-      setError(err.message || "Erreur lors de la création de la cliente");
+      setError(err.message || "Erreur lors de la création du client");
     } finally {
       setLoading(false);
     }
@@ -82,11 +82,11 @@ const AddClientModal = ({ open, onClose, onSuccess }: Props) => {
           </p>
 
           <h2 className="mt-2 font-title text-2xl font-bold text-(--black)">
-            Ajouter une cliente
+            Ajouter un client
           </h2>
 
           <p className="mt-2 text-sm text-(--muted)">
-            Créer une nouvelle fiche cliente
+            Créer une nouvelle fiche client
           </p>
         </div>
 
@@ -177,7 +177,7 @@ const AddClientModal = ({ open, onClose, onSuccess }: Props) => {
             ) : (
               <>
                 <UserPlus size={18} />
-                Créer la cliente
+                Créer le client
               </>
             )}
           </button>

@@ -59,7 +59,7 @@ const CashierTickets = () => {
           <input
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            placeholder="Rechercher ticket ou cliente..."
+            placeholder="Rechercher ticket ou client..."
             className="w-full bg-transparent outline-none"
           />
         </div>

@@ -3,8 +3,8 @@ import { Sparkles, Users, Award } from "lucide-react";
 import ImagePlaceholder from "../ui/ImagePlaceholder";
 
 const stats = [
-  { value: "1500+", label: "Clientes satisfaites", icon: Users },
-  { value: "10+", label: "Experts beauté", icon: Sparkles },
+  { value: "1500+", label: "Clients satisfaits", icon: Users },
+  { value: "10+", label: "Membres de l'équipe", icon: Sparkles },
   { value: "5★", label: "Note moyenne", icon: Award },
 ];
 
@@ -59,12 +59,12 @@ const About = () => (
         </p>
 
         <h2 className="mt-5 font-title text-3xl font-bold leading-tight text-(--black) sm:text-5xl">
-          Une beauté créée avec précision, élégance et passion
+          Un savoir-faire construit avec précision, exigence et passion
         </h2>
 
         <p className="mt-6 max-w-xl text-base leading-8 text-(--muted)">
-          SalonPro est plus qu'un institut de beauté. C'est un espace
-          raffiné où expertise, soins personnalisés et techniques modernes se
+          SalonPro est plus qu'un commerce. C'est un espace pensé où
+          expertise, attention personnalisée et outils modernes se
           rencontrent pour créer une expérience exceptionnelle.
         </p>
 

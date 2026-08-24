@@ -46,7 +46,7 @@ const Clients = () => {
       const data = await getClients({ search, page: 1, limit: 20 });
       setClients(data.clients ?? []);
     } catch {
-      setError("Impossible de charger les clientes.");
+      setError("Impossible de charger les clients.");
     } finally {
       setLoading(false);
     }
@@ -67,7 +67,7 @@ const Clients = () => {
     <div className="w-full space-y-6">
       <PageHeader
         kicker="Administration"
-        title="Gestion des clientes"
+        title="Gestion des clients"
         description="Consultez les profils clients et leur historique."
         icon={<Users size={24} />}
         action={
@@ -76,7 +76,7 @@ const Clients = () => {
             className="flex items-center justify-center gap-2 rounded-2xl bg-(--black) px-5 py-3 text-(--cream) transition hover:bg-(--brown-dark)"
           >
             <UserPlus size={18} />
-            Ajouter une cliente
+            Ajouter un client
           </button>
         }
       />
@@ -85,7 +85,7 @@ const Clients = () => {
         <div className="w-full *:h-full sm:w-[calc(33.333%-10.667px)]">
           <StatCard
             icon={Users}
-            title="Total clientes"
+            title="Total clients"
             value={clients.length}
             accent="black"
           />
@@ -111,7 +111,7 @@ const Clients = () => {
       <SearchBar
         value={search}
         onChange={setSearch}
-        placeholder="Rechercher une cliente..."
+        placeholder="Rechercher un client..."
       />
 
       {error && (
@@ -122,13 +122,13 @@ const Clients = () => {
 
       <section className="overflow-hidden rounded-3xl border border-(--border) bg-white">
         {loading ? (
-          <LoadingState label="Chargement des clientes..." />
+          <LoadingState label="Chargement des clients..." />
         ) : clients.length === 0 ? (
           <div className="p-2">
             <EmptyState
               icon={Users}
-              title="Aucune cliente trouvée"
-              description="Ajustez votre recherche ou ajoutez une nouvelle cliente."
+              title="Aucun client trouvé"
+              description="Ajustez votre recherche ou ajoutez un nouveau client."
             />
           </div>
         ) : (

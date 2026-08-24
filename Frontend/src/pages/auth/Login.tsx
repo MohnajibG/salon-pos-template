@@ -7,7 +7,7 @@ import {
   Loader2,
   ShieldCheck,
   Wallet,
-  Scissors,
+  Users,
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import api from "../../api/axios";
@@ -25,7 +25,7 @@ const roles: {
     icon: ShieldCheck,
     title: "Administration",
     description:
-      "Pilotez l'institut : équipe, prestations, statistiques et caisses.",
+      "Pilotez votre commerce : équipe, prestations, statistiques et caisses.",
   },
   {
     role: "cashier",
@@ -35,7 +35,7 @@ const roles: {
   },
   {
     role: "employee",
-    icon: Scissors,
+    icon: Users,
     title: "Employé",
     description: "Consultez votre planning et suivez vos prestations.",
   },
@@ -132,7 +132,7 @@ const Login = () => {
                   SALONPRO
                 </span>
                 <span className="mt-1 text-[0.55rem] font-semibold uppercase tracking-[0.45em] text-(--white)/50">
-                  Institute
+                  Commerce
                 </span>
               </span>
             </a>
@@ -148,12 +148,12 @@ const Login = () => {
               </p>
 
               <h1 className="mt-4 font-title text-3xl font-bold leading-tight">
-                Un accès dédié à chaque métier de l'institut
+                Un accès dédié à chaque métier de votre commerce
               </h1>
 
               <p className="mt-4 max-w-sm text-sm leading-7 text-(--white)/60">
                 Un seul portail de connexion, un espace de travail adapté à
-                votre rôle dans le salon.
+                votre rôle dans l'équipe.
               </p>
             </motion.div>
           </div>
@@ -200,7 +200,7 @@ const Login = () => {
                   SALONPRO
                 </span>
                 <span className="mt-1 text-[0.5rem] font-semibold uppercase tracking-[0.4em] text-(--brown)">
-                  Institute
+                  Commerce
                 </span>
               </span>
             </a>

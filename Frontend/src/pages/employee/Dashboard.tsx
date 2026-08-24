@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/set-state-in-effect */
 import { motion } from "framer-motion";
 import { useCallback, useEffect, useState } from "react";
-import { CalendarCheck, HandCoins, Scissors, TrendingUp, Users } from "lucide-react";
+import { CalendarCheck, HandCoins, Sparkles, TrendingUp, Users } from "lucide-react";
 
 import { getMyEmployeeProfile } from "../../api/employee.api";
 import type { Employee } from "../../types/employee";
@@ -50,7 +50,7 @@ const EmployeeDashboard = () => {
         kicker="Espace employé"
         title={`Bonjour ${employee.firstName}`}
         description={employee.speciality ?? "Employé"}
-        icon={<Scissors size={24} />}
+        icon={<Sparkles size={24} />}
       />
 
       <section className="flex flex-wrap gap-4">
@@ -64,7 +64,7 @@ const EmployeeDashboard = () => {
         </div>
         <div className="w-full *:h-full sm:w-[calc(50%-8px)] xl:w-[calc(25%-12px)]">
           <StatCard
-            icon={Scissors}
+            icon={Sparkles}
             title="Prestations réalisées"
             value={0}
             accent="gold"
